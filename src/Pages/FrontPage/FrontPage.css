@@ -1,0 +1,44 @@
+.frontPage {
+    width: 100%;
+}
+
+.opening {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+#openingHeader1 {
+   padding-top: 1rem;
+    font-size: 100px;
+    font-weight: 400;
+    text-align: center;
+    transform: translateX(-1400px);
+    transition: 2s;
+    opacity: 0;
+}
+
+#openingHeader2 {
+    padding-top: 1rem;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1rem;
+    transform: translateX(1400px);
+    transition: 2s;
+    opacity: 0;
+}
+
+.startButtonContainer {
+    transform: translateY(400px);
+    transition: 2s;
+    opacity: 0;
+}
+
+
+#startButton {
+    font-size: 44px !important;
+}
