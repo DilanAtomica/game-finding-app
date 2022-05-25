@@ -9,10 +9,11 @@
     flex-direction: column;
     width: 50%;
     margin: auto;
+    padding-bottom: 15rem;
 }
 
 #openingHeader1 {
-   padding-top: 1rem;
+    padding-top: 4rem;
     font-size: 100px;
     font-weight: 400;
     text-align: center;
@@ -22,7 +23,7 @@
 }
 
 #openingHeader2 {
-    padding-top: 1rem;
+    padding-top: 2rem;
     font-size: 80px;
     font-weight: 400;
     text-align: center;
@@ -36,9 +37,128 @@
     transform: translateY(400px);
     transition: 2s;
     opacity: 0;
+    padding-top: 2rem;
 }
 
 
 #startButton {
     font-size: 44px !important;
+}
+
+.platformContainer {
+    width: 50%;
+    margin: auto;
+    outline: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+}
+
+.platformContainer > h1 {
+    padding-bottom: 2rem;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.platforms img {
+    object-fit: contain;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.platformContainer  button {
+    margin-top: 1rem;
+    font-size: 40px !important;
+}
+
+.genreContainer {
+    width: 50%;
+    margin: auto;
+    outline: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+
+}
+
+.genreContainer > h1 {
+    padding-bottom: 2rem;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.genres{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.genresBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.genresBox > button {
+    margin-top: 2rem !important;
+    width: 12rem !important;
+    transition: 0.2s !important;
+}
+
+.genresBox > button:hover {
+    transform: scale(1.2);
+}
+
+.genreContainer > button {
+    margin-top: 2rem;
+    font-size: 40px !important;
+}
+
+#genresButtonNext {
+    margin-top: 2rem !important;
+}
+
+.playerAmountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rem;
+}
+
+.playerAmountContainer > h1 {
+    padding-bottom: 2rem;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.amountOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.amountOptions  button {
+    width: 20rem;
+    margin-bottom: 1rem;
+    font-size: 30px !important;
+}
+
+.playerAmountContainer > button {
+    margin-top: 2rem;
 }
