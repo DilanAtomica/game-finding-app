@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./FrontPage.css";
-import {motion} from "framer-motion";
 import axios from "axios";
-import Button from '@mui/material/Button';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Opening from "../../Components/FrontPage/Opening";
 import PlatformContainer from "../../Components/FrontPage/PlatformContainer";
 import GenreContainer from "../../Components/FrontPage/GenreContainer";
@@ -12,6 +9,32 @@ import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer"
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
 
 function FrontPage(props) {
+
+    const [platforms, setPlatforms] = useState([]);
+    const [genres, setGenres] = useState([]);
+    const [gameModes, setGameModes] = useState([]);
+    const [preferences, setPreferences] = useState([]);
+
+
+    const handlePlatforms = (platform) => {
+        setPlatforms([...platforms, platform]);
+        console.log(platforms)
+    }
+
+    const handleGenres = (genre) => {
+        setGenres([...genres, genre]);
+        console.log(genres)
+    }
+
+    const handleGameModes = (gameMode) => {
+        setGameModes([...gameModes, gameMode]);
+        console.log(gameModes)
+    }
+
+    const handlePreferences = (preference) => {
+        setPreferences([...preferences, preference]);
+        console.log(preferences)
+    }
 
     useEffect(() => {
         const getData = async() => {
@@ -26,13 +49,13 @@ function FrontPage(props) {
         <div className="frontPage">
            <Opening />
 
-            <PlatformContainer />
+            <PlatformContainer handlePlatforms={handlePlatforms} />
 
-            <GenreContainer />
+            <GenreContainer handleGenres={handleGenres} />
 
-           <GameModeContainer />
+           <GameModeContainer handleGameModes={handleGameModes} />
 
-           <ImportanceContainer />
+           <ImportanceContainer handlePreferences={handlePreferences} />
 
            <FinishContainer />
         </div>
