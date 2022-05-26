@@ -1,0 +1,48 @@
+.genreContainer {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+
+}
+
+.genreContainer > h1 {
+    padding-bottom: 2rem;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.genres{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.genresBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.genresBox > button {
+    margin-top: 2rem !important;
+    width: 12rem !important;
+    transition: 0.2s !important;
+}
+
+.genresBox > button:hover {
+    transform: scale(1.2);
+}
+
+.genreContainer > button {
+    margin-top: 2rem;
+    font-size: 40px !important;
+}
+
+#genresButtonNext {
+    margin-top: 2rem !important;
+}

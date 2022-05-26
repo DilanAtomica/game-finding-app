@@ -1,0 +1,34 @@
+.platformContainer {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+}
+
+.platformContainer > h1 {
+    padding-bottom: 2rem;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.platforms img {
+    object-fit: contain;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.platformContainer  button {
+    margin-top: 1rem;
+    font-size: 40px !important;
+}
