@@ -15,30 +15,30 @@ function GamesPage(props) {
     const [pageList, setPageList] = useState([]);
 
 
-        useEffect(() => {
-            if(API === "") return;
-            getGamesData();
-            getPages();
-            }, []);
+    useEffect(() => {
+        if(API === "") return;
+        getGamesData();
+        getPages();
+    }, []);
 
-        const getGamesData = async() => {
-            const response = await axios.get(API);
-            console.log(response.data.results);
-            setGame(response.data.results);
-        }
+    const getGamesData = async() => {
+        const response = await axios.get(API);
+        console.log(response.data.results);
+        setGame(response.data.results);
+    }
 
-        const getPages = () => {
-            const currentPageNumber = parseInt(API.split("=").pop());
+    const getPages = () => {
+        const currentPageNumber = parseInt(API.split("=").pop());
 
-            const pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
-                              currentPageNumber, currentPageNumber + 1, currentPageNumber + 2, currentPageNumber + 3,
-                              currentPageNumber + 4];
+        const pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
+            currentPageNumber, currentPageNumber + 1, currentPageNumber + 2, currentPageNumber + 3,
+            currentPageNumber + 4];
 
-            const filteredPageList = pageList.filter(pageNumber => pageNumber > 0);
+        const filteredPageList = pageList.filter(pageNumber => pageNumber > 0);
 
-            setCurrentPage(currentPageNumber);
-            setPageList(filteredPageList);
-        }
+        setCurrentPage(currentPageNumber);
+        setPageList(filteredPageList);
+    }
 
     return (
 
