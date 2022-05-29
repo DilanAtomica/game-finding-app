@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import "./FrontPage.css";
 import axios from "axios";
 import Opening from "../../Components/FrontPage/Opening";
@@ -7,6 +7,7 @@ import GenreContainer from "../../Components/FrontPage/GenreContainer";
 import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
+import {AppContext} from "../../App";
 
 function FrontPage(props) {
 
@@ -16,29 +17,120 @@ function FrontPage(props) {
     const [preferences, setPreferences] = useState([]);
 
 
+    const {setAPI} = useContext(AppContext);
+
+    const createAPI = () => {
+        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=1";
+
+        if( genres.length !== 0) string = string + "&genres=";
+        genres.map(genre => {
+            string = string + genre + ","
+        });
+        if( genres.length !== 0) string = string.slice(0, -1);
+
+        if( platforms.length !== 0) string = string + "&platforms=";
+        platforms.map(platform => {
+            string = string + platform + ",";
+        });
+        if( platforms.length !== 0)string = string.slice(0, -1);
+
+        if( preferences.length !== 0 || gameModes.length !== 0) string = string + "&tags=";
+
+        gameModes.map(mode => {
+            string = string + mode + ",";
+        });
+
+        preferences.map(preference => {
+            string = string + preference + ",";
+        });
+        if( preferences.length !== 0)string = string.slice(0, -1);
+
+        string = string + "&page=20";
+        setAPI(string);
+
+        console.log(string);
+    }
+
+
     const handlePlatforms = (platform) => {
-        setPlatforms([...platforms, platform]);
+        let alreadyClicked = false;
+
+        platforms.map(console => {
+            if(console === platform) {
+                alreadyClicked = true;
+            }
+        });
+
+        if(alreadyClicked) {
+            const newList = platforms.filter(console => console !== platform);
+            setPlatforms([...newList]);
+        } else {
+            setPlatforms([...platforms, platform]);
+        }
+
+
         console.log(platforms)
     }
 
-    const handleGenres = (genre) => {
-        setGenres([...genres, genre]);
+    const handleGenres = (chosenGenre) => {
+        let alreadyClicked = false;
+
+        genres.map(genre => {
+            if(genre === chosenGenre) {
+                alreadyClicked = true;
+            }
+        });
+
+        if(alreadyClicked) {
+            const newList = genres.filter(genre => genre !== chosenGenre);
+            setGenres([...newList]);
+        } else {
+            setGenres([...genres, chosenGenre]);
+        }
         console.log(genres)
     }
 
     const handleGameModes = (gameMode) => {
-        setGameModes([...gameModes, gameMode]);
+        let alreadyClicked = false;
+
+        gameModes.map(mode => {
+            if(mode === gameMode) {
+                alreadyClicked = true;
+            }
+        });
+
+        if(alreadyClicked) {
+            const newList = gameModes.filter(mode => mode !== gameMode);
+            setGameModes([...newList]);
+        } else {
+            setGameModes([...gameModes, gameMode]);
+        }
+
         console.log(gameModes)
     }
 
-    const handlePreferences = (preference) => {
-        setPreferences([...preferences, preference]);
+    const handlePreferences = (chosenPreference) => {
+        let alreadyClicked = false;
+
+        preferences.map(preference => {
+            if(chosenPreference === preference) {
+                alreadyClicked = true;
+            }
+        });
+
+        if(alreadyClicked) {
+            const newList = preferences.filter(preference => preference !== chosenPreference);
+            setPreferences([...newList]);
+        } else {
+            setPreferences([...preferences, chosenPreference]);
+        }
+
         console.log(preferences)
     }
 
     useEffect(() => {
         const getData = async() => {
-            const response = await axios.get("https://api.rawg.io/api/tags?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
+            const response = await axios.get("https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
             console.log(response.data.results);
         }
 
@@ -57,7 +149,7 @@ function FrontPage(props) {
 
            <ImportanceContainer handlePreferences={handlePreferences} />
 
-           <FinishContainer />
+           <FinishContainer createAPI={createAPI} />
         </div>
     );
 }

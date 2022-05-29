@@ -1,0 +1,36 @@
+.gamesPage {
+    width: 100%;
+}
+
+.gamesContainer {
+    width: 50%;
+    margin: auto;
+    outline: solid red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7.2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.gamesPages {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem
+
+}
+
+.pagesBox {
+    width: 1rem;
+    padding: 0.5rem;
+    height: 1rem;
+    border-radius: 5px;
+    background-color: teal;
+    text-align: center;
+    cursor: pointer;
+}
+
+

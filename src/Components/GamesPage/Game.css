@@ -1,0 +1,24 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.game > img {
+    width: 15rem;
+    height: 10rem;
+    cursor: pointer;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.game > img:hover {
+    transform: scale(1.2);
+}
+
+.game > p {
+    padding-top: 2rem;
+    font-size: 14px;
+    font-weight: 700;
+}
