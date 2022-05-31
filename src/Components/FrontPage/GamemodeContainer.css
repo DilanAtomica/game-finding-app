@@ -21,11 +21,7 @@
     align-items: center;
 }
 
-.modeOptions  button {
-    width: 20rem;
-    margin-bottom: 1rem;
-    font-size: 30px !important;
-}
+
 
 .gameModeContainer > button {
     margin-top: 2rem;

@@ -8,6 +8,7 @@ import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
 import {AppContext} from "../../App";
+import ProgressBar from "../../Components/FrontPage/ProgressBar";
 
 function FrontPage(props) {
 
@@ -20,7 +21,7 @@ function FrontPage(props) {
     const {setAPI} = useContext(AppContext);
 
     const createAPI = () => {
-        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=1";
+        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=39";
 
         if( genres.length !== 0) string = string + "&genres=";
         genres.map(genre => {
@@ -45,7 +46,7 @@ function FrontPage(props) {
         });
         if( preferences.length !== 0)string = string.slice(0, -1);
 
-        string = string + "&page=20";
+        string = string + "&page=1";
         setAPI(string);
 
         console.log(string);
@@ -139,6 +140,7 @@ function FrontPage(props) {
 
     return (
         <div className="frontPage">
+            <ProgressBar />
            <Opening />
 
             <PlatformContainer handlePlatforms={handlePlatforms} />

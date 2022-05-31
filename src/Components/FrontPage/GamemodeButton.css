@@ -1,0 +1,14 @@
+.gamemodeButton {
+
+}
+
+.gamemodeButton > button {
+    width: 20rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 30px !important;
+    transition: 0.3s !important;
+}
+
+.gamemodeButton > button:hover {
+    transform: scale(1.2);
+}

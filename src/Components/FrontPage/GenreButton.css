@@ -1,0 +1,13 @@
+.genreButton {
+
+}
+
+.genreButton > button {
+    margin-top: 2rem !important;
+    width: 12rem !important;
+    transition: 0.2s !important;
+}
+
+.genreButton > button:hover {
+    transform: scale(1.2);
+}

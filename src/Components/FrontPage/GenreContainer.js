@@ -3,51 +3,47 @@ import "./GenreContainer.css";
 import Button from "@mui/material/Button";
 import {motion} from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import GenreButton from "./GenreButton";
 
 function GenreContainer({handleGenres}) {
-
-    const handleClick = (e) => {
-        handleGenres(e.target.id);
-    }
 
     return (
         <div className="genreContainer">
             <h1>Choose genres</h1>
             <div className="genres">
                 <div className="genresBox">
-                    <Button onClick={handleClick} id="sports" style={{backgroundColor: "#0C7C59"}} variant="contained">Sports</Button>
-                    <Button onClick={handleClick} id="action" style={{backgroundColor: "#06D6A0"}} variant="contained">Action</Button>
-                    <Button onClick={handleClick} id="adventure" style={{backgroundColor: "#1B9AAA"}} variant="contained">Adventure</Button>
-                    <Button onClick={handleClick} id="rpg" style={{backgroundColor: "#EF476F"}} variant="contained">RPG</Button>
-                    <Button onClick={handleClick} id="strategy" style={{backgroundColor: "#FFC43D"}} variant="contained">Strategy</Button>
+                    <GenreButton handleGenres={handleGenres} idName="sports" color="#0C7C59" genreName="Sports" />
+                    <GenreButton handleGenres={handleGenres} idName="action" color="#06D6A0" genreName="Action" />
+                    <GenreButton handleGenres={handleGenres} idName="adventure" color="#1B9AAA" genreName="Adventure" />
+                    <GenreButton handleGenres={handleGenres} idName="rpg" color="#EF476F" genreName="RPG" />
+                    <GenreButton handleGenres={handleGenres} idName="strategy" color="#FFC43D" genreName="Strategy" />
                 </div>
 
                 <div className="genresBox">
-                    <Button onClick={handleClick} id="shooter" style={{backgroundColor: "#F39237"}} variant="contained">Shooter</Button>
-                    <Button onClick={handleClick} id="casual" style={{backgroundColor: "#BF1363"}} variant="contained">Casual</Button>
-                    <Button onClick={handleClick} id="simulation" style={{backgroundColor: "#0E79B2"}} variant="contained">Simulation</Button>
-                    <Button onClick={handleClick} id="puzzle" style={{backgroundColor: "#191923"}} variant="contained">Puzzle</Button>
-                    <Button onClick={handleClick} id="arcade" style={{backgroundColor: "#6A0F49"}} variant="contained">Arcade</Button>
+                    <GenreButton handleGenres={handleGenres} idName="shooter" color="#F39237" genreName="Shooter" />
+                    <GenreButton handleGenres={handleGenres} idName="casual" color="#BF1363" genreName="Casual" />
+                    <GenreButton handleGenres={handleGenres} idName="simulation" color="#0E79B2" genreName="Simulation" />
+                    <GenreButton handleGenres={handleGenres} idName="puzzle" color="#191923" genreName="Puzzle" />
+                    <GenreButton handleGenres={handleGenres} idName="arcade" color="#6A0F49" genreName="Arcade" />
                 </div>
 
                 <div className="genresBox">
-                    <Button onClick={handleClick} id="platformer" style={{backgroundColor: "#5DD9C1"}} variant="contained">Platformer</Button>
-                    <Button onClick={handleClick} id="racing" style={{backgroundColor: "#ACFCD9"}} variant="contained">Racing</Button>
-                    <Button onClick={handleClick} id="massive multiplayer" style={{backgroundColor: "#B084CC"}} variant="contained">Massive Multiplayer</Button>
-                    <Button onClick={handleClick} id="" style={{backgroundColor: "#665687"}} variant="contained">MMORPG</Button>
-                    <Button onClick={handleClick} id="fighting" style={{backgroundColor: "#190933"}} variant="contained">Fighting</Button>
+                    <GenreButton handleGenres={handleGenres} idName="platformer" color="#5DD9C1" genreName="Platformer" />
+                    <GenreButton handleGenres={handleGenres} idName="racing" color="#ACFCD9" genreName="Racing" />
+                    <GenreButton handleGenres={handleGenres} idName="massive-multiplayer" color="#B084CC" genreName="Massive Multiplayer" />
+                    <GenreButton handleGenres={handleGenres} idName="" color="#665687" genreName="MMORPG" />
+                    <GenreButton handleGenres={handleGenres} idName="fighting" color="#190933" genreName="Fighting" />
                 </div>
 
                 <div className="genresBox">
-                    <Button onClick={handleClick} id="family" style={{backgroundColor: "#003844"}} variant="contained">Family</Button>
-                    <Button onClick={handleClick} id="boardgames" style={{backgroundColor: "#006C67"}} variant="contained">Board Games</Button>
-                    <Button onClick={handleClick} id="educational" style={{backgroundColor: "#F194B4"}} variant="contained">Educational</Button>
-                    <Button onClick={handleClick} id="card" style={{backgroundColor: "#FFB100"}} variant="contained">Card</Button>
-                    <Button onClick={handleClick} id="indie" style={{backgroundColor: "#A31621"}} variant="contained">Indie</Button>
+                    <GenreButton handleGenres={handleGenres} idName="family" color="#003844" genreName="Family" />
+                    <GenreButton handleGenres={handleGenres} idName="board-games" color="#006C67" genreName="Board Games" />
+                    <GenreButton handleGenres={handleGenres} idName="educational" color="#F194B4" genreName="Educational" />
+                    <GenreButton handleGenres={handleGenres} idName="card" color="#FFB100" genreName="Card" />
+                    <GenreButton handleGenres={handleGenres} idName="indie" color="#A31621" genreName="Indie" />
                 </div>
-                <Button variant="contained" style={{fontSize: "24px"}}>No preference</Button>
             </div>
-            <motion.div  whileHover={{scale: 1.2}}><ArrowDownwardIcon id="arrowDown" /></motion.div>
+            <motion.div whileHover={{scale: 1.2}}><ArrowDownwardIcon id="arrowDown" /></motion.div>
         </div>
     );
 }

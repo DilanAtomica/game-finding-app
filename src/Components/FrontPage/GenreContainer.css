@@ -28,20 +28,7 @@
     flex-direction: column;
 }
 
-.genresBox > button {
-    margin-top: 2rem !important;
-    width: 12rem !important;
-    transition: 0.2s !important;
-}
 
-.genresBox > button:hover {
-    transform: scale(1.2);
-}
-
-.genreContainer > button {
-    margin-top: 2rem;
-    font-size: 40px !important;
-}
 
 #genresButtonNext {
     margin-top: 2rem !important;
