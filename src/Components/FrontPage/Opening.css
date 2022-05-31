@@ -3,14 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 15rem;
+    margin-bottom: 15rem;
 }
 
 #openingHeader1 {
     padding-top: 4rem;
-    font-size: 100px;
+    font-size: 7rem;
     font-weight: 400;
     text-align: center;
     transform: translateX(-1400px);
@@ -20,7 +18,7 @@
 
 #openingHeader2 {
     padding-top: 2rem;
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: 400;
     text-align: center;
     padding-bottom: 1rem;
@@ -38,5 +36,12 @@
 
 
 #startButton {
-    font-size: 44px !important;
+    font-size: 3rem !important;
+    transition: 0.3s !important;
+    background-color: #3577FF !important;
+    border-radius: 999px!important;
+}
+
+#startButton:hover {
+    transform: scale(1.2) !important;
 }

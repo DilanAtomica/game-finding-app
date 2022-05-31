@@ -1,14 +1,13 @@
 import React from 'react';
 import "./GenreContainer.css";
-import Button from "@mui/material/Button";
-import {motion} from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import GenreButton from "./GenreButton";
+import {Link} from "react-scroll";
 
 function GenreContainer({handleGenres}) {
 
     return (
-        <div className="genreContainer">
+        <div className="genreContainer" id="phaseTwo">
             <h1>Choose genres</h1>
             <div className="genres">
                 <div className="genresBox">
@@ -43,7 +42,7 @@ function GenreContainer({handleGenres}) {
                     <GenreButton handleGenres={handleGenres} idName="indie" color="#A31621" genreName="Indie" />
                 </div>
             </div>
-            <motion.div whileHover={{scale: 1.2}}><ArrowDownwardIcon id="arrowDown" /></motion.div>
+            <Link to="phaseThree" spy={true} smooth={true} offset={50} duration={1000}><ArrowDownwardIcon id="arrowDown" /></Link>
         </div>
     );
 }

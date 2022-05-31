@@ -1,0 +1,24 @@
+.platformButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    padding: 1rem;
+}
+
+.platformButton  img {
+    object-fit: contain;
+    height: 10rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.platformButton img:hover {
+    transform: scale(1.2);
+}
+
+.platformButton > h3 {
+    padding-top: 1rem;
+}
+

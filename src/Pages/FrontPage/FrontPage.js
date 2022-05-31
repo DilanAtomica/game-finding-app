@@ -129,19 +129,20 @@ function FrontPage(props) {
         console.log(preferences)
     }
 
-    useEffect(() => {
+   /* useEffect(() => {
         const getData = async() => {
             const response = await axios.get("https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
             console.log(response.data.results);
         }
 
         getData();
-    }, []);
+    }, []); */
 
     return (
         <div className="frontPage">
             <ProgressBar />
-           <Opening />
+
+            <Opening />
 
             <PlatformContainer handlePlatforms={handlePlatforms} />
 

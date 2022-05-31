@@ -1,10 +1,10 @@
-
 .gameModeContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20rem;
+    margin-bottom: 15rem;
+    padding-top: 17.5rem;
 }
 
 .gameModeContainer > h1 {

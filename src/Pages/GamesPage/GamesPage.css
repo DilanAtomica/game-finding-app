@@ -1,11 +1,12 @@
 .gamesPage {
     width: 100%;
+    padding-top: 80px;
 }
 
 .gamesContainer {
     width: 50%;
     margin: auto;
-    outline: solid red;
+    margin-top: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 7.2rem;

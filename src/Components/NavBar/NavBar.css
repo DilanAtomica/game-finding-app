@@ -1,12 +1,21 @@
 .navBar {
+    width: 100%;
+    background-color: #2B2D42;
+    position: fixed;
+    z-index: 10;
+}
+
+.navBarContent {
+    width: 50%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #00A6A6;
 }
 
 #logo {
-
+    color: #BCBEDC;
+    font-size: 5rem !important;
 }
 
 .rightSide {
@@ -17,8 +26,11 @@
 
 #favoriteIcon {
     padding-right: 1rem;
+    color: #BCBEDC;
+    font-size: 3rem !important;
 }
 
 #searchBox {
-
+    width: 30rem !important;
+    background-color: #BCBEDC;
 }
