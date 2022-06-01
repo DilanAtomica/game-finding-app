@@ -12,6 +12,8 @@ import ProgressBar from "../../Components/FrontPage/ProgressBar";
 
 function FrontPage(props) {
 
+
+
     const [platforms, setPlatforms] = useState([]);
     const [genres, setGenres] = useState([]);
     const [gameModes, setGameModes] = useState([]);
@@ -21,7 +23,7 @@ function FrontPage(props) {
     const {setAPI} = useContext(AppContext);
 
     const createAPI = () => {
-        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=39";
+        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30";
 
         if( genres.length !== 0) string = string + "&genres=";
         genres.map(genre => {

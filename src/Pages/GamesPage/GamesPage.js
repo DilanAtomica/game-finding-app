@@ -3,25 +3,24 @@ import "./GamesPage.css";
 import axios from "axios";
 import {useContext} from "react";
 import {AppContext} from "../../App";
-import Game from "../../Components/GamesPage/Game";
+import Pagination from "../../Components/GamesPage/Pagination";
+import GamesContainer from "../../Components/GamesPage/GamesContainer";
 
 function GamesPage(props) {
 
-
-    const {API, setAPI} = useContext(AppContext);
+    const {API, setAPI, showLoader} = useContext(AppContext);
 
     const [games, setGame] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageList, setPageList] = useState([]);
 
-    const [toggle, setToggle] = useState(false);
-
     useEffect(() => {
         if(API === "") return;
+        showLoader();
         window.scrollTo(0, 0);
         getGamesData();
         getPages();
-    }, [toggle]);
+    }, [API]);
 
     const getGamesData = async() => {
         const response = await axios.get(API);
@@ -46,24 +45,17 @@ function GamesPage(props) {
     const changePage = (e) => {
         const newAPI = API.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
         setAPI(newAPI);
-        setToggle(!toggle);
+    };
 
-    }
+
 
     return (
-
         <div className="gamesPage">
-            <div className="gamesContainer">
-                {games.map(game => (
+            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
 
-                    <Game key={game.id} id={game.id} name={game.name} background={game.background_image}/>
-                ))}
-            </div>
-            <div className="gamesPages">
-                {pageList.map(page => (
-                    <div onClick={changePage} key={page} style={{backgroundColor: page === currentPage && "lightgray"}} className="pagesBox">{page}</div>
-                ))}
-            </div>
+            <GamesContainer games={games} />
+
+            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
         </div>
     );
 }

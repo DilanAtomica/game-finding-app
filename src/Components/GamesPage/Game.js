@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./Game.css";
 
-function Game({name, background}) {
+function Game({name, background, metaScore, releaseDate}) {
 
     const [shortedName, setShortedName] = useState();
 
@@ -16,7 +16,18 @@ function Game({name, background}) {
     return (
         <div className="game">
             <img src={background} />
-            <p>{shortedName}</p>
+            <div className="gameInfo">
+                <p>{shortedName}</p>
+                <div className="gameInfo-extension">
+                    <div className="releaseYear">
+                        <p>{releaseDate.substring(0, 4)}</p>
+                    </div>
+                    <div className="metaScore">
+                        {metaScore ? metaScore : "?"}
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }
