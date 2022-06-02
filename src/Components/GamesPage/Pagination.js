@@ -14,7 +14,7 @@ function Pagination({pageList, changePage, currentPage}) {
     return (
         <div className="pagination" style={{display: loading && "none"}}>
             {pageList.map(page => (
-                <div onClick={handleClick} key={page} style={{backgroundColor: page === currentPage && "lightgray"}} className="pagesBox">{page}</div>
+                <div onClick={handleClick} key={page} style={{backgroundColor: page === currentPage && "lightgray", color: page === currentPage && "black"}} className="pagesBox">{page}</div>
             ))}
         </div>
     );

@@ -7,6 +7,7 @@ import GamesPage from "./Pages/GamesPage/GamesPage";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import React from "react";
 import {css} from "@emotion/react";
+import GameInfo from "./Pages/GameInfo/GameInfo";
 
 
 export const AppContext = createContext();
@@ -33,11 +34,12 @@ function App() {
     return (
       <AppContext.Provider value={{API, setAPI, loading, showLoader}}>
         <div className="App">
-            <PacmanLoader color="green" loading={loading} css={override} height="100" size={50} />
+            <PacmanLoader color="#05386B" loading={loading} css={override} height="100" size={50} />
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
             <Route path="/games" element={<> <NavBar /> <GamesPage /> </>} />
+            <Route path="/games/:id" element={<> <NavBar /> <GameInfo /> </>} />
         </Routes>
       </BrowserRouter>
         </div>

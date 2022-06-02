@@ -8,17 +8,12 @@ import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
 import {AppContext} from "../../App";
-import ProgressBar from "../../Components/FrontPage/ProgressBar";
-
 function FrontPage(props) {
-
-
 
     const [platforms, setPlatforms] = useState([]);
     const [genres, setGenres] = useState([]);
     const [gameModes, setGameModes] = useState([]);
     const [preferences, setPreferences] = useState([]);
-
 
     const {setAPI} = useContext(AppContext);
 
@@ -27,7 +22,7 @@ function FrontPage(props) {
 
         if( genres.length !== 0) string = string + "&genres=";
         genres.map(genre => {
-            string = string + genre + ","
+            string = string + genre + ",";
         });
         if( genres.length !== 0) string = string.slice(0, -1);
 
@@ -70,7 +65,6 @@ function FrontPage(props) {
         } else {
             setPlatforms([...platforms, platform]);
         }
-
 
         console.log(platforms)
     }
@@ -142,8 +136,6 @@ function FrontPage(props) {
 
     return (
         <div className="frontPage">
-            <ProgressBar />
-
             <Opening />
 
             <PlatformContainer handlePlatforms={handlePlatforms} />

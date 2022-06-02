@@ -1,6 +1,6 @@
 .navBar {
     width: 100%;
-    background-color: #2B2D42;
+    background-color: #5CDB95;
     position: fixed;
     z-index: 10;
 }
@@ -11,11 +11,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #379683;
 }
 
 #logo {
-    color: #BCBEDC;
-    font-size: 5rem !important;
+    color: #05386B;
+    font-size: 4rem !important;
 }
 
 .rightSide {
@@ -26,11 +27,30 @@
 
 #favoriteIcon {
     padding-right: 1rem;
-    color: #BCBEDC;
+    color: #05386B;
     font-size: 3rem !important;
 }
 
-#searchBox {
-    width: 30rem !important;
-    background-color: #BCBEDC;
+.searchBox {
+    height: 2rem;
+    width: 50%;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 2px solid #05386B ;
+}
+
+.searchBox > input {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+#searchIcon {
+    padding-right: 0.5rem !important;
+    color: #05386B !important;
 }
