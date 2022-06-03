@@ -55,3 +55,9 @@
     padding-right: 0.5rem !important;
     color: #05386B !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .navBarContent {
+        width: 100%;
+    }
+}

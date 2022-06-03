@@ -1,9 +1,112 @@
 .gameInfo{
-    outline: solid red;
+    width: 50%;
+    margin: auto;
+    padding-top: 6rem;
+}
+
+.gameInfo > h1 {
+    background-color: #05386B;
     width: 100%;
-    padding-top: 4rem;
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
-h1 {
+.gameInfo > img {
+    width: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 
 }
+
+.gameInfo > h2 {
+    background-color: #05386B;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.gameInfo > p {
+    background-color: #05386B;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.descriptionTitle {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-top: 0.5rem;
+
+}
+
+.smallDetailsContainer {
+    background-color: #05386B;
+    margin-top: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.detailsBox {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.detailsBoxTitle {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-top: 0.5rem;
+}
+
+.boxTwo {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    flex: 1;
+}
+
+.screenShotsTitle{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.carousel {
+    width: 100%;
+}
+
+#swiper {
+    width: 100%;
+}
+
+.carouselImg {
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.developersTitle {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.developersLogos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 900px) {
+    .gameInfo{
+        width: 100%;
+    }
+}
+
+
