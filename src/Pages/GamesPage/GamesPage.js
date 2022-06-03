@@ -5,32 +5,36 @@ import {useContext} from "react";
 import {AppContext} from "../../App";
 import Pagination from "../../Components/GamesPage/Pagination";
 import GamesContainer from "../../Components/GamesPage/GamesContainer";
+import {useNavigate, useParams} from "react-router-dom";
 
 function GamesPage(props) {
 
-    const {API, setAPI, showLoader} = useContext(AppContext);
+    let navigate = useNavigate();
+    let { apiUrl } = useParams();
+    const {showLoader} = useContext(AppContext);
 
     const [games, setGame] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageList, setPageList] = useState([]);
 
     useEffect(() => {
-        if(API === "") return;
+        if(apiUrl === undefined) return
         showLoader();
         window.scrollTo(0, 0);
         getGamesData();
         getPages();
-    }, [API]);
+    }, [apiUrl]);
 
     const getGamesData = async() => {
+        const API = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30" + apiUrl;
+        console.log(API);
         const response = await axios.get(API);
-        console.log(API)
         console.log(response.data.results);
         setGame(response.data.results);
     }
 
     const getPages = () => {
-        const currentPageNumber = parseInt(API.split("=").pop()); //Gets the characters after the last "=" which shows page number
+        const currentPageNumber = parseInt(apiUrl.split("=").pop()); //Gets the characters after the last "=" which shows page number
 
         const pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
             currentPageNumber, currentPageNumber + 1, currentPageNumber + 2, currentPageNumber + 3,
@@ -43,11 +47,9 @@ function GamesPage(props) {
     }
 
     const changePage = (e) => {
-        const newAPI = API.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
-        setAPI(newAPI);
+        const newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
+        navigate("/games/" + newAPI);
     };
-
-
 
     return (
         <div className="gamesPage">

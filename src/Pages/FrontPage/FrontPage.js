@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./FrontPage.css";
 import axios from "axios";
 import Opening from "../../Components/FrontPage/Opening";
@@ -7,18 +7,23 @@ import GenreContainer from "../../Components/FrontPage/GenreContainer";
 import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
-import {AppContext} from "../../App";
+import {useNavigate} from "react-router-dom";
+
 function FrontPage(props) {
+
+    let navigate = useNavigate();
 
     const [platforms, setPlatforms] = useState([]);
     const [genres, setGenres] = useState([]);
     const [gameModes, setGameModes] = useState([]);
     const [preferences, setPreferences] = useState([]);
 
-    const {setAPI} = useContext(AppContext);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const createAPI = () => {
-        let string = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30";
+        let string = "";
 
         if( genres.length !== 0) string = string + "&genres=";
         genres.map(genre => {
@@ -44,9 +49,10 @@ function FrontPage(props) {
         if( preferences.length !== 0)string = string.slice(0, -1);
 
         string = string + "&page=1";
-        setAPI(string);
 
         console.log(string);
+        navigate("/games/" + string);
+
     }
 
 

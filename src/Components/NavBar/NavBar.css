@@ -17,6 +17,7 @@
 #logo {
     color: #05386B;
     font-size: 4rem !important;
+    cursor: pointer;
 }
 
 .rightSide {

@@ -21,12 +21,12 @@
     border-top-left-radius: 15px;
 }
 
-.gameInfo {
+.gameDetails {
     width: 100%;
 
 }
 
-.gameInfo > p {
+.gameDetails > p {
     padding-top: 0.5rem;
     font-size: 14px;
     font-weight: 700;

@@ -15,7 +15,6 @@ export const AppContext = createContext();
 
 function App() {
 
-    const [API, setAPI] = useState("");
     const [loading, setLoading] = useState(false);
 
     const showLoader = () => {
@@ -32,14 +31,14 @@ function App() {
 
 
     return (
-      <AppContext.Provider value={{API, setAPI, loading, showLoader}}>
+      <AppContext.Provider value={{loading, showLoader}}>
         <div className="App">
             <PacmanLoader color="#05386B" loading={loading} css={override} height="100" size={50} />
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
-            <Route path="/games" element={<> <NavBar /> <GamesPage /> </>} />
-            <Route path="/games/:id" element={<> <NavBar /> <GameInfo /> </>} />
+            <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
+            <Route path="/gameinfo" element={<> <NavBar /> <GameInfo /> </>} />
         </Routes>
       </BrowserRouter>
         </div>

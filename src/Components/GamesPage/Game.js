@@ -16,7 +16,7 @@ function Game({name, background, metaScore, releaseDate}) {
     return (
         <div className="game">
             <img src={background} />
-            <div className="gameInfo">
+            <div className="gameDetails">
                 <p>{shortedName}</p>
                 <div className="gameInfo-extension">
                     <div className="releaseYear">
