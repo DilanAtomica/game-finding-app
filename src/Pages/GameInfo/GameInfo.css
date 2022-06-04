@@ -16,6 +16,7 @@
 
 .gameInfo > img {
     width: 100%;
+    height: 30rem;
     object-fit: cover;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -50,7 +51,7 @@
     margin-top: 1rem;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     border-radius: 15px;
@@ -67,9 +68,7 @@
 }
 
 .boxTwo {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    flex: 1;
+
 }
 
 .screenShotsTitle{

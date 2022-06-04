@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
             <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
-            <Route path="/gameinfo" element={<> <NavBar /> <GameInfo /> </>} />
+            <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
         </Routes>
       </BrowserRouter>
         </div>

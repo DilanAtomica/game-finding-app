@@ -13,7 +13,7 @@ function GamesPage(props) {
     let { apiUrl } = useParams();
     const {showLoader} = useContext(AppContext);
 
-    const [games, setGame] = useState([]);
+    const [games, setGames] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageList, setPageList] = useState([]);
 
@@ -26,11 +26,15 @@ function GamesPage(props) {
     }, [apiUrl]);
 
     const getGamesData = async() => {
-        const API = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30" + apiUrl;
-        console.log(API);
-        const response = await axios.get(API);
-        console.log(response.data.results);
-        setGame(response.data.results);
+        try {
+            const API = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30" + apiUrl;
+            console.log(API);
+            const response = await axios.get(API);
+            console.log(response.data.results);
+            setGames(response.data.results);
+        } catch {
+            console.log("Error")
+        }
     }
 
     const getPages = () => {
@@ -44,18 +48,21 @@ function GamesPage(props) {
 
         setCurrentPage(currentPageNumber);
         setPageList(filteredPageList);
-    }
+    };
 
     const changePage = (e) => {
         const newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
         navigate("/games/" + newAPI);
     };
 
+    const getGameInfo = (gameID) => {
+        navigate("/gameinfo/" + gameID);
+    }
     return (
         <div className="gamesPage">
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
 
-            <GamesContainer games={games} />
+            <GamesContainer getGameInfo={getGameInfo} games={games} />
 
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
         </div>

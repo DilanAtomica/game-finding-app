@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./GameInfo.css";
 import axios from "axios";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,38 +7,60 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import {useParams} from "react-router-dom";
+import {useContext} from "react";
+import {AppContext} from "../../App";
 
 function GameInfo(props) {
 
+    const [game, setGame] = useState([]);
+
+    const {showLoader, loading} = useContext(AppContext);
+
+    let { gameID } = useParams();
 
     useEffect(() => {
-        const getData = async() => {
-            const response = await axios.get("https://api.rawg.io/api/games/3498?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
-            console.log(response.data);
+        try {
+            if(gameID === undefined) return;
+            showLoader();
+            window.scrollTo(0, 0);
+            getGameInfo();
+        } catch {
+            console.log("error");
         }
+    }, []);
 
-        getData();
-    }, [])
+    const getGameInfo = async() => {
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
+        console.log(response.data);
+        setGame(response.data);
+    }
+
+
 
     return (
-        <div className="gameInfo">
-            <h1>Grand Theft Auto V</h1>
-            <img src="https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg" />
+        <div className="gameInfo" style={{display: loading && "none"}}>
+            <h1>{game.name}</h1>
+            <img src={game?.background_image} />
             <h2 className="descriptionTitle">Description</h2>
-            <p style={{textAlign: "start"}}>The year is 2021, and Genoq has become a leading corporation in bio-medical research. However the tower, some 90 stories high, is not all that it seems. Somewhere within the tower, highly illegal bio-weapons research has been conducted in secret. June 26th, disaster strikes and the lethal organic weapons have escaped and threaten not only the staff members stranded in the tower, but the world itself. <br/><br/>You arrive on the 80th floor with an urgent package addressed to Derrida, the lead scientist at Genoq working on the bio-weapons research. Set back from your goal, you must climb the tower, assisting those in need or focusing solely on your task at hand, and stopping the virus from escaping the tower and threatening all life on the planet.<br/><br/>Will you help the stranded survivors or hinder them? Can you deliver the package to Derrida in time? Can you prevent the impending catastrophe and escape with your life?</p>
+            <p style={{textAlign: "start"}}>{game?.description_raw}</p>
 
             <div className="smallDetailsContainer">
                 <div className="detailsBox boxOne">
                     <h2 className="detailsBoxTitle">Release Date</h2>
-                    <p>2012-10-10</p>
+                    <p>{game?.released}</p>
                 </div>
                 <div className="detailsBox boxTwo">
                     <h2 className="detailsBoxTitle">Genres</h2>
-                    <p>Action, Adventure, RPG</p>
+                    <p>{game.genres?.map(genre => (
+                       genre.name + " "
+                    ))}</p>
                 </div>
                 <div className="detailsBox boxThree">
                     <h2 className="detailsBoxTitle">Developers</h2>
-                    <p>Rockstar Games, Rockstar North</p>
+                    <p>{game.developers?.map(developer => (
+                        developer.name
+                    ))}</p>
                 </div>
             </div>
             <h2 className="screenShotsTitle">Screenshots</h2>
