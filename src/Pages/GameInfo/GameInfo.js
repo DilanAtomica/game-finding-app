@@ -14,6 +14,7 @@ import {AppContext} from "../../App";
 function GameInfo(props) {
 
     const [game, setGame] = useState([]);
+    const [screenShots, setScreenShots] = useState([]);
 
     const {showLoader, loading} = useContext(AppContext);
 
@@ -25,6 +26,7 @@ function GameInfo(props) {
             showLoader();
             window.scrollTo(0, 0);
             getGameInfo();
+            getScreenShots();
         } catch {
             console.log("error");
         }
@@ -34,6 +36,11 @@ function GameInfo(props) {
         const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
         console.log(response.data);
         setGame(response.data);
+    }
+
+    const getScreenShots = async() => {
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/screenshots" + "?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
+        setScreenShots(response.data.results);
     }
 
 
@@ -71,13 +78,10 @@ function GameInfo(props) {
                 spaceBetween={50}
                 navigation
                 pagination={{ clickable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
             >
-                <SwiperSlide> <img className="carouselImg" src="https://media.rawg.io/media/screenshots/cf4/cf4367daf6a1e33684bf19adb02d16d6.jpg" /></SwiperSlide>
-                <SwiperSlide> <img className="carouselImg" src="https://media.rawg.io/media/screenshots/5f5/5f5a38a222252d996b18962806eed707.jpg" /></SwiperSlide>
-                <SwiperSlide> <img className="carouselImg" src="https://media.rawg.io/media/screenshots/cf4/cf4367daf6a1e33684bf19adb02d16d6.jpg" /></SwiperSlide>
-                <SwiperSlide> <img className="carouselImg" src="https://media.rawg.io/media/screenshots/cf4/cf4367daf6a1e33684bf19adb02d16d6.jpg" /></SwiperSlide>
+                {screenShots?.map(shot => (
+                    <SwiperSlide key={shot.id}><img className="carouselImg" src={shot.image} /></SwiperSlide>
+                ))}
             </Swiper>
             </div>
 
