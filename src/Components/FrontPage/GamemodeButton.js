@@ -10,12 +10,18 @@ function GamemodeButton({idName, color, gamemodeName, handleGameModes}) {
 
 
     const handleClick = (e) => {
-        handleGameModes(e.target.id);
+        handleGameModes(e.currentTarget.id);
         setIsClicked(!isClicked);
     }
 
     return (
-        <motion.div whileTap={{ scale: 0.8 }} className="gamemodeButton"><Button onClick={handleClick} id={idName} style={{backgroundColor: isClicked ? "gray" : color}} variant="contained">{gamemodeName}</Button></motion.div>
+    <div className="gamemodeButton">
+        <Button onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
+            <div className="gamemodeFront" style={{backgroundColor: color}}><p>{gamemodeName}</p></div>
+            <div className="gamemodeBack" style={{backgroundColor: "gray"}}><p>{gamemodeName}</p></div>
+        </Button>
+    </div>
+
     );
 }
 

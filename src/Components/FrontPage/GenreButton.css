@@ -1,13 +1,34 @@
 .genreButton {
+    perspective: 1000px;
+    margin-top: 2rem;
+    width: 12rem;
+    height: 2.5rem;
+    transition: 0.3s;
+}
 
+.genreButton:hover {
+    transform: scale(1.2);
 }
 
 .genreButton > button {
-    margin-top: 2rem !important;
-    width: 12rem !important;
-    transition: 0.2s !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: 0.6s !important;
+    transform-style: preserve-3d !important;
+    border-radius: 5px !important;
 }
 
-.genreButton > button:hover {
-    transform: scale(1.2);
+.genreFront, .genreBack {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genreBack {
+    transform: rotateY(180deg);
 }

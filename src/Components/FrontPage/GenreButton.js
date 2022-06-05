@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Button from "@mui/material/Button";
-import {motion} from "framer-motion";
 import "./GenreButton.css";
 
 function GenreButton({color, genreName, idName, handleGenres}) {
@@ -8,12 +7,18 @@ function GenreButton({color, genreName, idName, handleGenres}) {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = (e) => {
-        handleGenres(e.target.id);
+        handleGenres(e.currentTarget.id);
         setIsClicked(!isClicked);
     }
 
     return (
-        <motion.div className="genreButton" whileTap={{ scale: 0.8 }}><Button onClick={handleClick} id={idName} style={{backgroundColor: isClicked ? "gray" : color}} variant="contained">{genreName}</Button></motion.div>
+        <div className="genreButton">
+            <Button onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}} variant="contained">
+                <div className="genreFront" style={{backgroundColor: color}}><p>{genreName}</p></div>
+                <div className="genreBack" style={{backgroundColor: "gray"}}><p>{genreName}</p></div>
+            </Button>
+
+        </div>
     );
 }
 
