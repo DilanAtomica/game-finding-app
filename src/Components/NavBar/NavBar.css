@@ -15,21 +15,16 @@
 }
 
 #logo {
+    background-color: #5CDB95;
     color: #05386B;
-    font-size: 4rem !important;
+    font-size: 4rem;
     cursor: pointer;
 }
 
-.rightSide {
-    display: flex;
-    align-items: center;
-    padding-right: 1rem;
-}
-
 #favoriteIcon {
-    padding-right: 1rem;
+    background-color: #5CDB95;
     color: #05386B;
-    font-size: 3rem !important;
+    font-size: 4rem;
 }
 
 .searchBox {
@@ -49,11 +44,14 @@
     border: none;
     outline: none;
     padding-left: 1rem;
+    background-color: white;
 }
 
 #searchIcon {
-    padding-right: 0.5rem !important;
-    color: #05386B !important;
+    padding-right: 0.5rem;
+    border-radius: 15px;
+    color: #05386B;
+    background-color: white;
 }
 
 @media only screen and (max-width: 600px) {

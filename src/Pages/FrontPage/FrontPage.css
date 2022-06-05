@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
+    background-color: white;
 }
 
 #arrowDown {

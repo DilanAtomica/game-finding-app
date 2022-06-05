@@ -38,8 +38,8 @@
 #startButton {
     font-size: 3rem !important;
     transition: 0.3s !important;
-    background-color: #05386B !important;
     border-radius: 999px!important;
+    background-color: #05386B!important;
 }
 
 #startButton:hover {

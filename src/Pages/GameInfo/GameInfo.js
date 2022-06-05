@@ -10,6 +10,14 @@ import 'swiper/css/scrollbar';
 import {useParams} from "react-router-dom";
 import {useContext} from "react";
 import {AppContext} from "../../App";
+import ps5 from "../../Images/ps5.png";
+import ps4 from "../../Images/ps4.png";
+import ps3 from "../../Images/ps3.png";
+import xbox1 from "../../Images/xbox1.png";
+import xbox360 from "../../Images/xbox360.png";
+import xboxSeries from "../../Images/xboxSeries.png";
+import nintendoSwitch from "../../Images/nintendoSwitch.png";
+import pc from "../../Images/pc.png";
 
 function GameInfo(props) {
 
@@ -70,6 +78,7 @@ function GameInfo(props) {
                     ))}</p>
                 </div>
             </div>
+
             <h2 className="screenShotsTitle">Screenshots</h2>
             <div className="carousel">
             <Swiper id="swiper"
@@ -84,6 +93,22 @@ function GameInfo(props) {
                 ))}
             </Swiper>
             </div>
+
+            <h2 className="platformTitle">Platform availability</h2>
+            <div className="platformsAvailableContainer">
+                {game.platforms?.map(platform => (
+                    <div key={platform.platform.id} className="platformsAvailableBox">
+                        <img src={
+                            platform.platform.name === "PlayStation 5" ? ps5 : platform.platform.name === "PlayStation 4" ? ps4 : platform.platform.name === "PlayStation 3" ? ps3
+                                : platform.platform.name === "Xbox Series S/X" ? xboxSeries : platform.platform.name === "Xbox One" ? xbox1 : platform.platform.name === "Xbox 360" ? xbox360 : platform.platform.name === "Nintendo Switch" ? nintendoSwitch
+                                    : platform.platform.name === "PC" ? pc : ""
+                        } />
+                        <h3>{platform.platform.name}</h3>
+                    </div>
+                ))}
+            </div>
+
+
 
         </div>
     );

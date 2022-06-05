@@ -17,6 +17,11 @@
     min-width: max-content;
     margin-bottom: 1rem;
     font-size: 30px !important;
-    background-color: #05386B;
+    background-color: #05386B !important;
     border-radius: 999px!important;
+    transition: 0.3s;
+}
+
+.finishContainer > button:hover {
+   transform: scale(1.2);
 }

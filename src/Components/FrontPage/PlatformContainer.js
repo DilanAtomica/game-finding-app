@@ -3,6 +3,14 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import "./PlatformContainer.css";
 import PlatformButton from "./PlatformButton";
 import {Link} from "react-scroll";
+import ps5 from "../../Images/ps5.png";
+import ps4 from "../../Images/ps4.png";
+import ps3 from "../../Images/ps3.png";
+import xbox1 from "../../Images/xbox1.png";
+import xbox360 from "../../Images/xbox360.png";
+import xboxSeries from "../../Images/xboxSeries.png";
+import nintendoSwitch from "../../Images/nintendoSwitch.png";
+import pc from "../../Images/pc.png";
 
 function PlatformContainer({handlePlatforms}) {
 
@@ -10,13 +18,15 @@ function PlatformContainer({handlePlatforms}) {
         <div className="platformContainer" id="phaseOne">
             <h1>Choose platforms</h1>
             <div className="platforms">
-                <PlatformButton handlePlatforms={handlePlatforms} idName="187" platformName="Playstation 5" srcName="https://img.prisguiden.no/3131/3131663/1111557.258x300!m.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="18" platformName="Playstation 4" srcName="https://img.prisguiden.no/1761/1761744/original.316x300!m.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="16" platformName="Playstation 3" srcName="https://www.konsolinet.fi/tuotekuvat/900x600/170px-PS3-Fat-Console-Vert.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="1" platformName="Xbox One" srcName="https://m.media-amazon.com/images/I/71NBQ2a52CL._SX425_.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="14" platformName="Xbox 360" srcName="https://pricespy-75b8.kxcdn.com/product/standard/280/673888.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="7" platformName="Nintendo Switch" srcName="https://www.tradeinn.com/f/13734/137343676/nintendo-konsoll-switch.jpg" />
-                <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName="https://pcsupport.no/wp-content/uploads/2021/06/pcs_arbeidsstasjon_forside.png" />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="187" platformName="Playstation 5" srcName={ps5} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="18" platformName="Playstation 4" srcName={ps4} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="16" platformName="Playstation 3" srcName={ps3} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="1" platformName="Xbox One" srcName={xbox1} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="14" platformName="Xbox 360" srcName={xbox360} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="186" platformName="Xbox Series S/X" srcName={xboxSeries} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="7" platformName="Nintendo Switch" srcName={nintendoSwitch} />
+                <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName={pc}/>
+
             </div>
             <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><ArrowDownwardIcon id="arrowDown" /></Link>
         </div>
