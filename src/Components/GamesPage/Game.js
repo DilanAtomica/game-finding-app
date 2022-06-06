@@ -24,14 +24,13 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
                 <p>{shortedName}</p>
                 <div className="gameInfo-extension">
                     <div className="releaseYear">
-                        <p>{releaseDate.substring(0, 4)}</p>
+                        <p>{releaseDate?.substring(0, 4)}</p>
                     </div>
                     <div className="metaScore">
                         {metaScore ? metaScore : "?"}
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }

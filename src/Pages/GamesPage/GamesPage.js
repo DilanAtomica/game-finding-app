@@ -62,7 +62,7 @@ function GamesPage(props) {
         <div className="gamesPage">
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
 
-            <GamesContainer getGameInfo={getGameInfo} games={games} />
+            <GamesContainer getGameInfo={getGameInfo} games={games} width={"50%"} />
 
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
         </div>

@@ -1,0 +1,9 @@
+.gamesContainer {
+    margin: auto;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7.2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}

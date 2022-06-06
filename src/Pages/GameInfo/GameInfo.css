@@ -48,7 +48,6 @@
 
 .smallDetailsContainer {
     background-color: #05386B;
-    margin-top: 1rem;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -67,10 +66,6 @@
     padding-top: 0.5rem;
 }
 
-.boxTwo {
-
-}
-
 .screenShotsTitle{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -79,10 +74,14 @@
 
 .carousel {
     width: 100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 #swiper {
     width: 100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .carouselImg {
@@ -90,6 +89,8 @@
     height: 30rem;
     cursor: pointer;
     object-fit: cover;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .developersTitle {
@@ -172,18 +173,70 @@
     gap: 2.5rem;
 }
 
-.storesContainer a > img {
+.storeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.storeBox a > img {
     object-fit: contain;
     height: 5rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.storesContainer a > img:hover {
+.storeBox a > img:hover {
     transform: scale(1.2);
 }
 
+.storeBox > h3 {
+    padding-top: 0.5rem;
+}
 
+.relatedGamesTitle {
+    border-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.linksTitle {
+    border-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.linksBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.linksBox > a > img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 999px;
+    padding-top: 0.5rem;
+    transition: 0.2s;
+}
+
+.linksBox > a > img:hover {
+    transform: scale(1.2);
+}
+
+.linksBoxTitle {
+    padding-top: 0.5rem;
+}
 
 @media only screen and (max-width: 900px) {
     .gameInfo{

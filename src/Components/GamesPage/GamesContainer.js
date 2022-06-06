@@ -4,12 +4,12 @@ import Game from "./Game";
 import {useContext} from "react";
 import {AppContext} from "../../App";
 
-function GamesContainer({games, getGameInfo}) {
+function GamesContainer({games, getGameInfo, width}) {
 
     const {loading} = useContext(AppContext);
 
     return (
-        <div className="gamesContainer" style={{display: loading && "none"}}>
+        <div className="gamesContainer" style={{display: loading && "none", width: width}}>
             {games.map(game => (
                 <Game key={game.id} id={game.id} getGameInfo={getGameInfo} name={game.name} background={game.background_image} metaScore={game.metacritic} releaseDate={game.released}/>
             ))}
