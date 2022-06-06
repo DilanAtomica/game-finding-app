@@ -3,14 +3,14 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import "./PlatformContainer.css";
 import PlatformButton from "./PlatformButton";
 import {Link} from "react-scroll";
-import ps5 from "../../Images/ps5.png";
-import ps4 from "../../Images/ps4.png";
-import ps3 from "../../Images/ps3.png";
-import xbox1 from "../../Images/xbox1.png";
-import xbox360 from "../../Images/xbox360.png";
-import xboxSeries from "../../Images/xboxSeries.png";
-import nintendoSwitch from "../../Images/nintendoSwitch.png";
-import pc from "../../Images/pc.png";
+import ps5 from "../../Images/Platforms/ps5.png";
+import ps4 from "../../Images/Platforms/ps4.png";
+import ps3 from "../../Images/Platforms/ps3.png";
+import xbox1 from "../../Images/Platforms/xbox1.png";
+import xbox360 from "../../Images/Platforms/xbox360.png";
+import xboxSeries from "../../Images/Platforms/xboxSeries.png";
+import nintendoSwitch from "../../Images/Platforms/nintendoSwitch.png";
+import pc from "../../Images/Platforms/pc.png";
 
 function PlatformContainer({handlePlatforms}) {
 

@@ -158,6 +158,31 @@
     padding-top: 1rem;
 }
 
+.storesTitle {
+    border-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.storesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 2.5rem;
+}
+
+.storesContainer a > img {
+    object-fit: contain;
+    height: 5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.storesContainer a > img:hover {
+    transform: scale(1.2);
+}
+
 
 
 @media only screen and (max-width: 900px) {
