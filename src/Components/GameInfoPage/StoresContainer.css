@@ -1,0 +1,49 @@
+.storesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.storesContainer > h2 {
+    background-color: #05386B;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.stores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 2.5rem;
+}
+
+
+.storeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.storeBox a > img {
+    object-fit: contain;
+    height: 5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.storeBox a > img:hover {
+    transform: scale(1.2);
+}
+
+.storeBox > h3 {
+    padding-top: 0.5rem;
+}

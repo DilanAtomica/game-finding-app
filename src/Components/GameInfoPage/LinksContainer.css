@@ -1,0 +1,46 @@
+.linksContainer {
+    margin-top: 1rem;
+}
+
+.linksContainer > h2 {
+    background-color: #05386B;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+}
+
+.linksBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.linksBox > a > img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 999px;
+    padding-top: 0.5rem;
+    transition: 0.2s;
+}
+
+.linksBox > a > img:hover {
+    transform: scale(1.2);
+}
+
+.linksBoxTitle {
+    padding-top: 0.5rem;
+}

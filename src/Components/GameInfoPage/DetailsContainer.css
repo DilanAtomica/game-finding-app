@@ -1,0 +1,38 @@
+.detailsContainer{
+    background-color: #05386B;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.detailsBox {
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsBox > h2 {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-top: 0.5rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags > p {
+    margin-top: 0.5rem;
+    background-color: #5CDB95;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+}

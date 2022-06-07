@@ -1,0 +1,46 @@
+.platformsContainer {
+    margin-top: 1rem;
+}
+
+.platformsContainer > h2 {
+    background-color: #05386B;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 15px;
+    padding: 0.5rem 0;
+}
+
+.platformsAvailableContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 2.5rem;
+}
+
+.platformsAvailableBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.platformsAvailableBox > img {
+    object-fit: contain;
+    height: 10rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.platformsAvailableBox > img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.platformsAvailableBox > h3 {
+    padding-top: 1rem;
+}

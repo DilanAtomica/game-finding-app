@@ -1,0 +1,12 @@
+.relatedGamesContainer {
+    margin-top: 1rem;
+}
+
+.relatedGamesContainer > h2 {
+    background-color: #05386B;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.5rem 0;
+    width: 100%;
+}
