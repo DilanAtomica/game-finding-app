@@ -8,6 +8,7 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import React from "react";
 import {css} from "@emotion/react";
 import GameInfo from "./Pages/GameInfo/GameInfo";
+import FavoritesPage from "./Pages/FavoritesPage/FavoritesPage";
 
 
 export const AppContext = createContext();
@@ -39,6 +40,8 @@ function App() {
           <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
             <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
             <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
+            <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> </>} />
+
         </Routes>
       </BrowserRouter>
         </div>

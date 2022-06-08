@@ -6,12 +6,13 @@ import {AppContext} from "../../App";
 import Pagination from "../../Components/GamesPage/Pagination";
 import GamesContainer from "../../Components/GamesPage/GamesContainer";
 import {useNavigate, useParams} from "react-router-dom";
+import NoResults from "../../Components/GamesPage/NoResults";
 
 function GamesPage(props) {
 
     let navigate = useNavigate();
     let { apiUrl } = useParams();
-    const {showLoader} = useContext(AppContext);
+    const {showLoader, loading} = useContext(AppContext);
 
     const [games, setGames] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -58,13 +59,15 @@ function GamesPage(props) {
     const getGameInfo = (gameID) => {
         navigate("/gameinfo/" + gameID);
     }
+
     return (
-        <div className="gamesPage">
-            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
+        <div className="gamesPage" style={{display: loading && "none"}}>
+            <NoResults games={games}/>
+            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} games={games} />
 
             <GamesContainer getGameInfo={getGameInfo} games={games} width={"50%"} />
 
-            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} />
+            <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} games={games} />
         </div>
     );
 }

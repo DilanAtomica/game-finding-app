@@ -38,6 +38,7 @@
 .gameInfo-extension {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px;
     font-weight: 700;
 }
@@ -63,4 +64,16 @@
     padding: 0.5rem;
     color: white;
     margin: 0.5rem;
+}
+
+.heartBorderIcon {
+    font-size: 2rem !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.heartFullIcon {
+    font-size: 2rem !important;
+    color: red !important;
+    cursor: pointer !important;
 }

@@ -25,6 +25,7 @@
     background-color: #5CDB95;
     color: #05386B;
     font-size: 4rem;
+    cursor: pointer;
 }
 
 .searchBox {

@@ -17,7 +17,7 @@ function NavBar(props) {
                     <input type="text" placeholder="Search" />
                     <SearchIcon id="searchIcon" />
                 </div>
-                <FavoriteIcon id="favoriteIcon" sx={{fontSize: "34px"}} />
+                <FavoriteIcon onClick={() => navigate("/favorites")} id="favoriteIcon" sx={{fontSize: "34px"}} />
             </div>
         </div>
     );
