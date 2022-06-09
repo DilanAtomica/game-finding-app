@@ -4,14 +4,14 @@
     align-items: center;
     border-radius: 50px;
     padding: 1rem;
+
 }
 
 .platformButton  img {
     object-fit: contain;
-    height: 10rem;
+    height: 9rem;
     cursor: pointer;
     transition: 0.3s;
-
 }
 
 .platformButton img:hover {
@@ -21,4 +21,29 @@
 .platformButton > h3 {
     padding-top: 1rem;
 }
+
+@media only screen and (max-width: 900px) {
+    .platformButton{
+        padding: 0.5rem;
+    }
+    .platformButton  img {
+        height: 7.5rem;
+    }
+    .platformButton > h3 {
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .platformButton{
+        padding: 0.25rem;
+    }
+    .platformButton  img {
+        height: 6rem;
+    }
+    .platformButton > h3 {
+        font-size: 0.75rem;
+    }
+}
+
 

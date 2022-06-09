@@ -15,7 +15,7 @@ function PlatformButton({idName, platformName, srcName, handlePlatforms}) {
 
     return (
         <div className="platformButton">
-            <motion.div whileTap={{ scale: 0.8 }}><img id={idName}  onClick={handleClick}  src={srcName} alt="platform"/></motion.div>
+            <motion.button type="button" onClick={handleClick}  whileTap={{ scale: 0.8 }}><img id={idName} src={srcName} alt="platform"/></motion.button>
             <h3 style={{color: isClicked && "green"}}>{platformName}</h3>
             <CheckIcon id="checkIcon" style={{color: isClicked ? "green" : "white"}} />
         </div>

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./Game.css";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import questionMark from "../../Images/Links/questionMark.png";
 
 function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
 
@@ -50,7 +51,7 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
 
     return (
         <div className="game">
-            <img onClick={handleClick} src={background} />
+            <button type="button"><img onClick={handleClick} src={background ? background : questionMark} /></button>
             <div className="gameDetails">
                 <p>{shortedName}</p>
                 <div className="gameInfo-extension">
@@ -58,8 +59,9 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
                         <p>{releaseDate?.substring(0, 4)}</p>
                     </div>
                     <div className="heartIcons">
-                        <FavoriteBorderIcon className="heartBorderIcon" style={{display: hearted && "none"}} onClick={handleFavoriteClick} />
-                        <FavoriteIcon className="heartFullIcon" style={{display: !hearted && "none"}} onClick={handleFavoriteClick}/>
+                        {hearted
+                        ? <button type="button"><FavoriteIcon className="heartFullIcon" onClick={handleFavoriteClick}/></button>
+                        : <button type="button"><FavoriteBorderIcon className="heartBorderIcon"  onClick={handleFavoriteClick} /></button>}
                     </div>
                     <div className="metaScore">
                         {metaScore ? metaScore : "?"}

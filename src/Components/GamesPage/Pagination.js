@@ -10,7 +10,10 @@ function Pagination({pageList, changePage, currentPage, games}) {
     return (
         <div className="pagination" style={{display: games.length === 0 && "none"}}>
             {pageList.map(page => (
-                <div onClick={handleClick} key={page} style={{backgroundColor: page === currentPage && "lightgray", color: page === currentPage && "black"}} className="pagesBox">{page}</div>
+                <button key={page} type="button">
+                    <div onClick={handleClick} style={{backgroundColor: page === currentPage && "lightgray", color: page === currentPage && "black"}} className="pagesBox">
+                        {page}</div>
+                </button>
             ))}
         </div>
     );

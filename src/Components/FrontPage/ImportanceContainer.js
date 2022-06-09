@@ -16,7 +16,7 @@ function ImportanceContainer({handlePreferences}) {
                 <ImportanceButton handlePreferences={handlePreferences} idName="atmospheric" color="#0099DD" importanceName="Atmospheric" />
                 <ImportanceButton handlePreferences={handlePreferences} idName="full-controller-support" color="#FF9933" importanceName="Controller support" />
             </div>
-            <Link to="phaseFive" spy={true} smooth={true} offset={50} duration={1000}><ArrowDownwardIcon id="arrowDown" /></Link>
+            <Link to="phaseFive" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
 
         </div>
     );

@@ -28,7 +28,7 @@ function PlatformContainer({handlePlatforms}) {
                 <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName={pc}/>
 
             </div>
-            <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><ArrowDownwardIcon id="arrowDown" /></Link>
+            <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
         </div>
     );
 }

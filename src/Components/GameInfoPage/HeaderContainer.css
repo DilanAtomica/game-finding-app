@@ -34,3 +34,10 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
+
+@media only screen and (max-width: 400px) {
+    .headerContainer > img {
+        height: 15rem;
+    }
+}
+

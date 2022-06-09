@@ -13,7 +13,7 @@ function GenreButton({color, genreName, idName, handleGenres}) {
 
     return (
         <div className="genreButton">
-            <Button onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}} variant="contained">
+            <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}} variant="contained">
                 <div className="genreFront" style={{backgroundColor: color}}><p>{genreName}</p></div>
                 <div className="genreBack" style={{backgroundColor: "gray"}}><p>{genreName}</p></div>
             </Button>

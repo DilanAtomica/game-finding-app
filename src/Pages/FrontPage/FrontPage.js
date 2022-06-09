@@ -1,16 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
+import {useNavigate} from "react-router-dom";
+import {AppContext} from "../../App";
 import "./FrontPage.css";
-import axios from "axios";
 import Opening from "../../Components/FrontPage/Opening";
 import PlatformContainer from "../../Components/FrontPage/PlatformContainer";
 import GenreContainer from "../../Components/FrontPage/GenreContainer";
 import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
-import {useNavigate} from "react-router-dom";
+
 
 function FrontPage(props) {
 
+    const {deActiveLoader} = useContext(AppContext);
     let navigate = useNavigate();
 
     const [platforms, setPlatforms] = useState([]);
@@ -20,6 +22,7 @@ function FrontPage(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        deActiveLoader();
     }, []);
 
     const createAPI = () => {
@@ -130,15 +133,6 @@ function FrontPage(props) {
 
         console.log(preferences)
     }
-
-   /* useEffect(() => {
-        const getData = async() => {
-            const response = await axios.get("https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
-            console.log(response.data.results);
-        }
-
-        getData();
-    }, []); */
 
     return (
         <div className="frontPage">

@@ -8,13 +8,13 @@ import {AppContext} from "../../App";
 function FavoritesPage(props) {
 
     let navigate = useNavigate();
-    const {showLoader} = useContext(AppContext);
+    const {activateLoader, deActiveLoader} = useContext(AppContext);
 
     const [favoriteGames, setFavoriteGames] = useState([]);
 
         useEffect(() => {
             if(favoriteGames === undefined) return
-            showLoader();
+            activateLoader();
             window.scrollTo(0, 0);
             getFavoriteGamesData();
         }, []);
@@ -32,6 +32,7 @@ function FavoritesPage(props) {
                 list.push(response.data);
             }));
             setFavoriteGames(list);
+            deActiveLoader();
 
         } catch {
             console.log("Error")

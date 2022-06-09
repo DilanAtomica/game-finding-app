@@ -9,6 +9,7 @@ import React from "react";
 import {css} from "@emotion/react";
 import GameInfo from "./Pages/GameInfo/GameInfo";
 import FavoritesPage from "./Pages/FavoritesPage/FavoritesPage";
+import NoResultsPage from "./Pages/ErrorPage/NoResultsPage";
 
 
 export const AppContext = createContext();
@@ -18,11 +19,12 @@ function App() {
 
     const [loading, setLoading] = useState(false);
 
-    const showLoader = () => {
+    const activateLoader = () => {
         setLoading(true);
-        setTimeout(function() {
-            setLoading(false);
-        }, 1200);
+    };
+
+    const deActiveLoader = () => {
+        setLoading(false);
     };
 
     const override = css` // css for the loader
@@ -32,7 +34,7 @@ function App() {
 
 
     return (
-      <AppContext.Provider value={{loading, showLoader}}>
+      <AppContext.Provider value={{loading, activateLoader, deActiveLoader}}>
         <div className="App">
             <PacmanLoader color="#05386B" loading={loading} css={override} height="100" size={50} />
         <BrowserRouter>
@@ -41,6 +43,7 @@ function App() {
             <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
             <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
             <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> </>} />
+            <Route path="/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
 
         </Routes>
       </BrowserRouter>

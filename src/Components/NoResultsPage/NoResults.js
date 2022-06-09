@@ -7,7 +7,7 @@ function NoResults({games}) {
     let navigate = useNavigate();
 
     return (
-        <div className="noResults" style={{display: games.length > 0 && "none"}}>
+        <div className="noResults">
             <h1>Sorry, but we could not find anything that met your requirements... 😔 </h1>
             <Button variant="contained" onClick={() => navigate("/")}>Back to homepage</Button>
         </div>

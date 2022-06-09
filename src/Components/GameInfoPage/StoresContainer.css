@@ -33,17 +33,19 @@
     text-align: center;
 }
 
-.storeBox a > img {
-    object-fit: contain;
-    height: 5rem;
+#storeIcon {
     cursor: pointer;
     transition: 0.3s;
 }
 
-.storeBox a > img:hover {
+#storeIcon:hover {
     transform: scale(1.2);
 }
 
 .storeBox > h3 {
-    padding-top: 0.5rem;
 }
+
+#storeIcon {
+    color: black;
+}
+

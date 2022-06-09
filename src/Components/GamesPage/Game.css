@@ -12,7 +12,7 @@
 }
 
 
-.game > img {
+.game > button > img {
     width: 15rem;
     height: 10rem;
     cursor: pointer;

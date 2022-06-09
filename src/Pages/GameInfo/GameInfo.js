@@ -20,14 +20,14 @@ function GameInfo(props) {
     const [relatedGames, setRelatedGames] = useState([]);
 
     let navigate = useNavigate();
-    const {showLoader, loading} = useContext(AppContext);
+    const {activateLoader, deActiveLoader, loading} = useContext(AppContext);
 
     let { gameID } = useParams();
 
     useEffect(() => {
         try {
             if(gameID === undefined) return;
-            showLoader();
+            activateLoader();
             window.scrollTo(0, 0);
             getGameInfo();
             getScreenShots();
@@ -42,6 +42,7 @@ function GameInfo(props) {
         const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "?key=0bdf9bbe0b33484f82b8ba3ae23aa065");
         console.log(response.data);
         setGame(response.data);
+        deActiveLoader();
     }
 
     const getScreenShots = async() => {

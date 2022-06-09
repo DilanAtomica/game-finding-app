@@ -15,7 +15,7 @@ function ImportanceButton({idName, color, importanceName, handlePreferences}) {
 
     return (
         <div className="importanceButton">
-            <Button onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
+            <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
                 <div className="importanceFront" style={{backgroundColor: color}}><p>{importanceName}</p></div>
                 <div className="importanceBack" style={{backgroundColor: "gray"}}><p>{importanceName}</p></div>
             </Button>

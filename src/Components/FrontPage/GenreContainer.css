@@ -4,17 +4,15 @@
     align-items: center;
     margin-bottom: 15rem;
     padding-top: 15rem;
-
 }
 
 .genreContainer > h1 {
-    padding-bottom: 2rem;
     font-size: 52px;
     font-weight: 400;
     text-align: center;
 }
 
-.genres{
+.genres {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -27,8 +25,20 @@
     flex-direction: column;
 }
 
-
-
-#genresButtonNext {
-    margin-top: 2rem !important;
+@media only screen and (max-width: 900px) {
+    .genreContainer > h1 {
+        font-size: 2rem;
+    }
 }
+
+@media only screen and (max-width: 400px) {
+    .genreContainer {
+        padding-top: 8rem;
+    }
+    .genreContainer > h1 {
+        font-size: 2rem;
+    }
+
+}
+
+

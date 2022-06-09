@@ -7,11 +7,10 @@
 }
 
 #openingHeader1 {
-    padding-top: 4rem;
     font-size: 7rem;
     font-weight: 400;
     text-align: center;
-    transform: translateX(-1400px);
+    transform: translateX(-100%);
     transition: 2s;
     opacity: 0;
 }
@@ -22,13 +21,13 @@
     font-weight: 400;
     text-align: center;
     padding-bottom: 1rem;
-    transform: translateX(1400px);
+    transform: translateX(100%);
     transition: 2s;
     opacity: 0;
 }
 
 .startButtonContainer {
-    transform: translateY(400px);
+    transform: translateY(120%);
     transition: 2s;
     opacity: 0;
     padding-top: 2rem;
@@ -45,3 +44,20 @@
 #startButton:hover {
     transform: scale(1.2) !important;
 }
+
+
+@media only screen and (max-width: 400px) {
+    #openingHeader1 {
+        font-size: 5rem;
+    }
+
+    #openingHeader2 {
+        font-size: 3rem;
+    }
+
+    #startButton {
+        font-size: 2rem !important;
+    }
+
+}
+

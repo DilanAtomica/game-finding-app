@@ -50,3 +50,10 @@
     color: white !important;
     opacity: 1 !important;
 }
+
+@media only screen and (max-width: 400px) {
+    #swiper  img {
+        height: 15rem;
+    }
+}
+

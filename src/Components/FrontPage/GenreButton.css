@@ -6,6 +6,7 @@
     transition: 0.3s;
 }
 
+
 .genreButton:hover {
     transform: scale(1.2);
 }
@@ -32,3 +33,20 @@
 .genreBack {
     transform: rotateY(180deg);
 }
+
+@media only screen and (max-width: 900px) {
+    .genreButton {
+        margin-top: 0.5rem;
+        width: 11rem;
+        height: 2.75rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .genreButton {
+        margin-top: 0.5rem;
+        width: 9rem;
+        height: 2.25rem;
+    }
+}
+

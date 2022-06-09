@@ -6,12 +6,13 @@
     align-items: center;
     padding-top: 80px;
     background-color: white;
+
 }
 
 #arrowDown {
     background-color: white;
     font-size: 60px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -19,4 +20,12 @@
 #arrowDown:hover {
     transform: scale(1.2);
 }
+
+@media only screen and (max-width: 400px) {
+    .frontPage {
+        width: 100%;
+    }
+}
+
+
 

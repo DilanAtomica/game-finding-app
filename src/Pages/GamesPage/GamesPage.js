@@ -6,13 +6,12 @@ import {AppContext} from "../../App";
 import Pagination from "../../Components/GamesPage/Pagination";
 import GamesContainer from "../../Components/GamesPage/GamesContainer";
 import {useNavigate, useParams} from "react-router-dom";
-import NoResults from "../../Components/GamesPage/NoResults";
 
 function GamesPage(props) {
 
     let navigate = useNavigate();
     let { apiUrl } = useParams();
-    const {showLoader, loading} = useContext(AppContext);
+    const {loading, activateLoader, deActiveLoader} = useContext(AppContext);
 
     const [games, setGames] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -20,10 +19,9 @@ function GamesPage(props) {
 
     useEffect(() => {
         if(apiUrl === undefined) return
-        showLoader();
+        activateLoader();
         window.scrollTo(0, 0);
         getGamesData();
-        getPages();
     }, [apiUrl]);
 
     const getGamesData = async() => {
@@ -31,19 +29,31 @@ function GamesPage(props) {
             const API = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30" + apiUrl;
             console.log(API);
             const response = await axios.get(API);
-            console.log(response.data.results);
-            setGames(response.data.results);
+            const results = response.data.results;
+            results.length === 0 && navigate("/noresults");
+
+            setGames(results);
+            getPages(results.length);
+            deActiveLoader();
         } catch {
             console.log("Error")
+            navigate("/noresults");
         }
     }
 
-    const getPages = () => {
+    const getPages = (pageSize) => {
         const currentPageNumber = parseInt(apiUrl.split("=").pop()); //Gets the characters after the last "=" which shows page number
 
-        const pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
-            currentPageNumber, currentPageNumber + 1, currentPageNumber + 2, currentPageNumber + 3,
-            currentPageNumber + 4];
+        let pageList;
+        console.log(pageSize)
+        if(pageSize < 30) {
+            pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
+                currentPageNumber];
+        } else {
+            pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
+                currentPageNumber, currentPageNumber + 1, currentPageNumber + 2, currentPageNumber + 3,
+                currentPageNumber + 4];
+        }
 
         const filteredPageList = pageList.filter(pageNumber => pageNumber > 0);
 
@@ -62,7 +72,6 @@ function GamesPage(props) {
 
     return (
         <div className="gamesPage" style={{display: loading && "none"}}>
-            <NoResults games={games}/>
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} games={games} />
 
             <GamesContainer getGameInfo={getGameInfo} games={games} width={"50%"} />
