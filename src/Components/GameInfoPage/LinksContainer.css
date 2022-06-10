@@ -44,3 +44,14 @@
 .linksBoxTitle {
     padding-top: 0.5rem;
 }
+
+#redditIcon {
+    color: white;
+    background-color: #F74306;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+#redditIcon:hover {
+    transform: scale(1.2);
+}

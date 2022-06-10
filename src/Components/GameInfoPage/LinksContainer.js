@@ -1,8 +1,9 @@
 import React from 'react';
 import "./LinksContainer.css";
-import redditLogo from "../../Images/Links/reddit.png";
 import metaCriticLogo from "../../Images/Links/metacritic.png";
 import questionMark from "../../Images/Links/questionMark.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faReddit} from '@fortawesome/free-brands-svg-icons'
 
 function LinksContainer({redditLink, metaCriticLink, websiteLink, subRedditIcon}) {
     return (
@@ -11,7 +12,7 @@ function LinksContainer({redditLink, metaCriticLink, websiteLink, subRedditIcon}
             <div className="links" style={{borderTopRightRadius: "0", borderTopLeftRadius: "0"}}>
                 {redditLink &&
                     <div className="linksBox">
-                        <a href={redditLink}><img src={redditLogo} /></a>
+                        <a href={redditLink}><FontAwesomeIcon id="redditIcon" size={"4x"} icon={faReddit} /></a>
                         <h3 className="linksBoxTitle">Games Subreddit</h3>
                     </div>
                 }

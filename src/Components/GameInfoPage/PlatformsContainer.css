@@ -30,7 +30,7 @@
 
 .platformsAvailableBox > img {
     object-fit: contain;
-    height: 10rem;
+    height: 5rem;
     cursor: pointer;
     transition: 0.3s;
 }

@@ -28,7 +28,7 @@ function GenreContainer({handleGenres}) {
 
                 <div className="genresBox">
                     <GenreButton handleGenres={handleGenres} idName="platformer" color="#5DD9C1" genreName="Platformer" />
-                    <GenreButton handleGenres={handleGenres} idName="racing" color="#ACFCD9" genreName="Racing" />
+                    <GenreButton handleGenres={handleGenres} idName="racing" color="#F51AA4" genreName="Racing" />
                     <GenreButton handleGenres={handleGenres} idName="massive-multiplayer" color="#B084CC" genreName="Massive Multiplayer" />
                     <GenreButton handleGenres={handleGenres} idName="" color="#665687" genreName="MMORPG" />
                     <GenreButton handleGenres={handleGenres} idName="fighting" color="#190933" genreName="Fighting" />
