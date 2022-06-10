@@ -50,25 +50,25 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
 
 
     return (
-        <div className="game">
-            <button type="button"><img onClick={handleClick} src={background ? background : questionMark} /></button>
+        <li className="game">
+                <h1>{shortedName}</h1>
+            <button type="button"><img onClick={handleClick} src={background ? background : questionMark} alt={name} /></button>
             <div className="gameDetails">
-                <p>{shortedName}</p>
-                <div className="gameInfo-extension">
-                    <div className="releaseYear">
-                        <p>{releaseDate?.substring(0, 4)}</p>
-                    </div>
-                    <div className="heartIcons">
+                <ul className="gameInfo-extension">
+                    <li className="releaseYear">
+                        <h2>{releaseDate?.substring(0, 4)}</h2>
+                    </li>
+                    <li className="heartIcons">
                         {hearted
                         ? <button type="button"><FavoriteIcon className="heartFullIcon" onClick={handleFavoriteClick}/></button>
                         : <button type="button"><FavoriteBorderIcon className="heartBorderIcon"  onClick={handleFavoriteClick} /></button>}
-                    </div>
-                    <div className="metaScore">
-                        {metaScore ? metaScore : "?"}
-                    </div>
-                </div>
+                    </li>
+                    <li className="metaScore">
+                        <h2>{metaScore ? metaScore : "?"}</h2>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </li>
     );
 }
 

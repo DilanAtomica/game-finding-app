@@ -32,7 +32,7 @@
     gap: 0.5rem;
 }
 
-.tags > p {
+.tags > li {
     margin-top: 0.5rem;
     background-color: #5CDB95;
     padding: 0.25rem 0.5rem;

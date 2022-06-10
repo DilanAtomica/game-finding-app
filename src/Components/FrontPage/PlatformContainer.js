@@ -15,9 +15,9 @@ import pc from "../../Images/Platforms/pc.png";
 function PlatformContainer({handlePlatforms}) {
 
     return (
-        <div className="platformContainer" id="phaseOne">
+        <section className="platformContainer" id="phaseOne">
             <h1>Choose platforms</h1>
-            <div className="platforms">
+            <ul className="platforms">
                 <PlatformButton handlePlatforms={handlePlatforms} idName="187" platformName="Playstation 5" srcName={ps5} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="18" platformName="Playstation 4" srcName={ps4} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="16" platformName="Playstation 3" srcName={ps3} />
@@ -26,10 +26,9 @@ function PlatformContainer({handlePlatforms}) {
                 <PlatformButton handlePlatforms={handlePlatforms} idName="186" platformName="Xbox Series S/X" srcName={xboxSeries} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="7" platformName="Nintendo Switch" srcName={nintendoSwitch} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName={pc}/>
-
-            </div>
+            </ul>
             <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
-        </div>
+        </section>
     );
 }
 

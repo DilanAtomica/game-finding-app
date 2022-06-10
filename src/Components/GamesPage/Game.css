@@ -17,8 +17,7 @@
     height: 10rem;
     cursor: pointer;
     object-fit: cover;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+
 }
 
 .gameDetails {
@@ -26,12 +25,12 @@
 
 }
 
-.gameDetails > p {
-    padding-top: 0.5rem;
-    font-size: 14px;
+.game > h1 {
+    font-size: 0.875rem;
     font-weight: 700;
     text-align: center;
     color: white;
+    padding: 0.5rem 0;
 
 }
 
@@ -41,6 +40,10 @@
     align-items: center;
     font-size: 14px;
     font-weight: 700;
+}
+
+.gameInfo-extension  h2 {
+    font-size: 0.875rem;
 }
 
 .metaScore {

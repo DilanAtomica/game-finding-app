@@ -66,7 +66,7 @@ function GameInfo(props) {
     }
 
     return (
-        <div className="gameInfo" style={{display: loading && "none"}}>
+        <main className="gameInfo" style={{display: loading && "none"}}>
             <HeaderContainer name={game?.name} background={game?.background_image} description={game?.description_raw} />
 
             <DetailsContainer release={game?.released} genres={game?.genres} developers={game?.developers}/>
@@ -81,7 +81,7 @@ function GameInfo(props) {
 
             <RelatedGamesContainer getGameInfo={getRelatedGameDetails} games={relatedGames} />
 
-        </div>
+        </main>
     );
 }
 

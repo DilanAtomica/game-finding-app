@@ -8,14 +8,15 @@ function Pagination({pageList, changePage, currentPage, games}) {
     }
 
     return (
-        <div className="pagination" style={{display: games.length === 0 && "none"}}>
+        <nav className="pagination" style={{display: games.length === 0 && "none"}}>
+            <ul>
             {pageList.map(page => (
-                <button key={page} type="button">
-                    <div onClick={handleClick} style={{backgroundColor: page === currentPage && "lightgray", color: page === currentPage && "black"}} className="pagesBox">
-                        {page}</div>
-                </button>
+                    <li><button onClick={handleClick} style={{backgroundColor: page === currentPage && "lightgray", color: page === currentPage && "black"}} className="pagesBox">
+                        <h2>{page}</h2>
+                    </button></li>
             ))}
-        </div>
+            </ul>
+        </nav>
     );
 }
 

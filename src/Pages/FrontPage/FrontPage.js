@@ -135,7 +135,8 @@ function FrontPage(props) {
     }
 
     return (
-        <div className="frontPage">
+        <main className="frontPage">
+
             <Opening />
 
             <PlatformContainer handlePlatforms={handlePlatforms} />
@@ -147,7 +148,7 @@ function FrontPage(props) {
            <ImportanceContainer handlePreferences={handlePreferences} />
 
            <FinishContainer createAPI={createAPI} />
-        </div>
+        </main>
     );
 }
 

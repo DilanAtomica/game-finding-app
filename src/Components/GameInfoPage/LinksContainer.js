@@ -7,29 +7,29 @@ import {faReddit} from '@fortawesome/free-brands-svg-icons'
 
 function LinksContainer({redditLink, metaCriticLink, websiteLink, subRedditIcon}) {
     return (
-        <div className="linksContainer">
-            <h2 className="linksTitle">Various Links</h2>
-            <div className="links" style={{borderTopRightRadius: "0", borderTopLeftRadius: "0"}}>
+        <section className="linksContainer">
+            <h1 className="linksTitle">Various Links</h1>
+            <ul className="links" style={{borderTopRightRadius: "0", borderTopLeftRadius: "0"}}>
                 {redditLink &&
-                    <div className="linksBox">
+                    <li className="linksBox">
                         <a href={redditLink}><FontAwesomeIcon id="redditIcon" size={"4x"} icon={faReddit} /></a>
-                        <h3 className="linksBoxTitle">Games Subreddit</h3>
-                    </div>
+                        <h2>Games Subreddit</h2>
+                    </li>
                 }
                 {metaCriticLink &&
-                    <div className="linksBox">
-                        <a href={metaCriticLink}><img src={metaCriticLogo} /></a>
-                        <h3 className="linksBoxTitle">MetaCritic</h3>
-                    </div>
+                    <li className="linksBox">
+                        <a href={metaCriticLink}><img src={metaCriticLogo} alt="Meta critic logo" /></a>
+                        <h2 className="linksBoxTitle">MetaCritic</h2>
+                    </li>
                 }
                 {websiteLink &&
-                    <div className="linksBox">
-                        <a href={websiteLink}><img src={subRedditIcon ? subRedditIcon : questionMark} /></a>
-                        <h3 className="linksBoxTitle">Games Website</h3>
-                    </div>
+                    <li className="linksBox">
+                        <a href={websiteLink}><img src={subRedditIcon ? subRedditIcon : questionMark} alt="Games website logo" /></a>
+                        <h2 className="linksBoxTitle">Games Website</h2>
+                    </li>
                 }
-            </div>
-        </div>
+            </ul>
+        </section>
     );
 }
 

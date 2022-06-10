@@ -13,9 +13,9 @@ function NoResultsPage(props) {
     }, []);
 
     return (
-        <div className="noResultsPage">
+        <main className="noResultsPage">
             <NoResults />
-        </div>
+        </main>
     );
 }
 

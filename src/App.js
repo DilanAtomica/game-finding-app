@@ -9,7 +9,7 @@ import React from "react";
 import {css} from "@emotion/react";
 import GameInfo from "./Pages/GameInfo/GameInfo";
 import FavoritesPage from "./Pages/FavoritesPage/FavoritesPage";
-import NoResultsPage from "./Pages/ErrorPage/NoResultsPage";
+import NoResultsPage from "./Pages/NoResultsPage/NoResultsPage";
 
 
 export const AppContext = createContext();
@@ -44,7 +44,6 @@ function App() {
             <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
             <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> </>} />
             <Route path="/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
-
         </Routes>
       </BrowserRouter>
         </div>

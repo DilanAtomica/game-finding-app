@@ -9,11 +9,13 @@ function GamesContainer({games, getGameInfo, width}) {
     const {loading} = useContext(AppContext);
 
     return (
-        <div className="gamesContainer" style={{display: loading && "none", width: width}}>
+        <section className="gamesContainer" style={{display: loading && "none", width: width}}>
+            <ul>
             {games.map(game => (
                 <Game key={game.id} id={game.id} getGameInfo={getGameInfo} name={game.name} background={game.background_image} metaScore={game.metacritic} releaseDate={game.released}/>
             ))}
-        </div>
+            </ul>
+        </section>
     );
 }
 

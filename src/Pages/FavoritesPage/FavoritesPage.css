@@ -4,7 +4,7 @@
     padding-top: 6rem;
 }
 
-.favoritesPage > h2 {
+.favoritesPage > section > h1 {
     background-color: #05386B;
     color: white;
     text-align: center;

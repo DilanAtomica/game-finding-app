@@ -9,16 +9,16 @@ import {Link} from "react-scroll";
 function ImportanceContainer({handlePreferences}) {
 
     return (
-        <div className="importanceContainer" id="phaseFour">
+        <section className="importanceContainer" id="phaseFour">
             <h1>Are any of these important?</h1>
-            <div className="importanceOptions">
+            <ul className="importanceOptions">
                 <ImportanceButton handlePreferences={handlePreferences} idName="great-soundtrack" color="#00ABBD" importanceName="Great Soundtrack" />
                 <ImportanceButton handlePreferences={handlePreferences} idName="atmospheric" color="#0099DD" importanceName="Atmospheric" />
                 <ImportanceButton handlePreferences={handlePreferences} idName="full-controller-support" color="#FF9933" importanceName="Controller support" />
-            </div>
+            </ul>
             <Link to="phaseFive" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
 
-        </div>
+        </section>
     );
 }
 

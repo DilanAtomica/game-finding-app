@@ -1,11 +1,11 @@
-.navBar {
+header {
     width: 100%;
     background-color: #5CDB95;
     position: fixed;
     z-index: 10;
 }
 
-.navBarContent {
+nav {
     width: 50%;
     margin: auto;
     display: flex;
@@ -66,7 +66,7 @@ button #searchIcon {
 }
 
 @media only screen and (max-width: 900px) {
-    .navBarContent {
+    nav {
         width: 100%;
     }
 }

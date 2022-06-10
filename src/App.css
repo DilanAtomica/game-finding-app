@@ -6,6 +6,10 @@
   font-family: Roboto, serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 html {
   font-size: 16px
 }

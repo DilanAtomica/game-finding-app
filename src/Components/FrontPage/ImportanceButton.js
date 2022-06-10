@@ -14,12 +14,12 @@ function ImportanceButton({idName, color, importanceName, handlePreferences}) {
     }
 
     return (
-        <div className="importanceButton">
+        <li className="importanceButton">
             <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
-                <div className="importanceFront" style={{backgroundColor: color}}><p>{importanceName}</p></div>
-                <div className="importanceBack" style={{backgroundColor: "gray"}}><p>{importanceName}</p></div>
+                <div className="importanceFront" style={{backgroundColor: color}}><h2>{importanceName}</h2></div>
+                <div className="importanceBack" style={{backgroundColor: "gray"}}><h2>{importanceName}</h2></div>
             </Button>
-        </div>
+        </li>
     );
 }
 

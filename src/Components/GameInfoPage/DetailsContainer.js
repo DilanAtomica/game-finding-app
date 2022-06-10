@@ -3,30 +3,30 @@ import "./DetailsContainer.css";
 
 function DetailsContainer({release, genres, developers}) {
     return (
-            <div className="detailsContainer" style={{marginTop: "1rem"}}>
+            <section className="detailsContainer" style={{marginTop: "1rem"}}>
                 <div className="detailsBox">
                     <h2>Released</h2>
-                    <div className="tags">
-                        <p>{release}</p>
-                    </div>
+                    <ul className="tags">
+                        <li>{release}</li>
+                    </ul>
                 </div>
                 <div className="detailsBox"  style={{display: genres?.length <= 0 && "none"}}>
                     <h2>Genres</h2>
-                    <div className="tags">
+                    <ul className="tags">
                         {genres?.map(genre => (
-                            <p key={genre.id}>{genre.name}</p>
+                            <li key={genre.id}>{genre.name}</li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
                 <div className="detailsBox" style={{display: developers?.length <= 0 && "none"}}>
                     <h2>Developers</h2>
-                    <div className="tags">
+                    <ul className="tags">
                     {developers?.map(developer => (
-                        <p key={developer.id}>{developer.name}</p>
+                        <li key={developer.id}>{developer.name}</li>
                     ))}
-                    </div>
+                    </ul>
                 </div>
-            </div>
+            </section>
     );
 }
 

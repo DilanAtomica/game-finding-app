@@ -21,17 +21,16 @@ function NavBar(props) {
     }
 
     return (
-        <div className="navBar">
-            <div className="navBarContent">
+        <header>
+            <nav>
                 <button type="button"><SportsEsportsIcon onClick={() => navigate("/")} id="logo" sx={{fontSize: "80px"}} /></button>
                 <form onSubmit={handleSubmit} className="searchBox">
                     <input type="text" placeholder="Search"  onChange={(e) => setSearchInput(e.target.value)}/>
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
                 </form>
                 <button type="button"><FavoriteIcon onClick={() => navigate("/favorites")} id="favoriteIcon" sx={{fontSize: "34px"}} /></button>
-
-            </div>
-        </div>
+            </nav>
+        </header>
     );
 }
 

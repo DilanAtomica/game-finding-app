@@ -9,8 +9,8 @@ import 'swiper/css/scrollbar';
 
 function ScreenShotsContainer({screenShots, screenShotsCount}) {
     return (
-        <div className="screenShotsContainer" style={{display: screenShotsCount <= 0 && "none"}}>
-             <h2>Screenshots</h2>
+        <section className="screenShotsContainer" style={{display: screenShotsCount <= 0 && "none"}}>
+             <h1>Screenshots</h1>
             <div className="carousel">
                     <Swiper id="swiper"
                             modules={[Navigation, Pagination, A11y]}
@@ -20,11 +20,11 @@ function ScreenShotsContainer({screenShots, screenShotsCount}) {
                             pagination={{ clickable: true }}
                     >
                         {screenShots?.map(shot => (
-                            <SwiperSlide key={shot.id}><img className="carouselImg" src={shot.image} /></SwiperSlide>
+                            <SwiperSlide key={shot.id}><img className="carouselImg" src={shot.image} alt="screenshot" /></SwiperSlide>
                         ))}
                     </Swiper>
                 </div>
-        </div>
+        </section>
     );
 }
 

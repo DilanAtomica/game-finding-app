@@ -13,13 +13,13 @@ function Opening(props) {
     }, []);
 
     return (
-            <div className="opening">
-                <h1 style={{transform: toggle && "translateX(0)", opacity: toggle && "1"}} id="openingHeader1">Welcome to Game Finder</h1>
-                <h1 style={{transform: toggle && "translateX(0)", opacity: toggle && "1"}} id="openingHeader2">Ready to begin your Search?</h1>
+            <section className="opening">
+                <h1 style={{transform: toggle && "translateX(0)", opacity: toggle && "1"}} >Welcome to Game Finder</h1>
+                <h2 style={{transform: toggle && "translateX(0)", opacity: toggle && "1"}} >Ready to begin your Search?</h2>
                 <div style={{transform: toggle && "translateY(0)", opacity: toggle && "1"}} className="startButtonContainer">
                     <Link to="phaseOne" spy={true} smooth={true} offset={50} duration={1000}><Button type="button" id="startButton" size="large" variant="contained">Let's Go!</Button></Link>
                 </div>
-            </div>
+            </section>
 
     );
 }

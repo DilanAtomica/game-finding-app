@@ -25,12 +25,12 @@ import questionMark from "../../Images/Links/questionMark.png";
 
 function PlatformsContainer({platforms}) {
     return (
-        <div className="platformsContainer" style={{display: platforms?.length <= 0 && "none"}}>
-            <h2>Platform availability</h2>
-            <div className="platformsAvailableContainer">
+        <section className="platformsContainer" style={{display: platforms?.length <= 0 && "none"}}>
+            <h1>Platform availability</h1>
+            <ul className="platformsAvailableContainer">
                 {platforms?.map(platform => (
-                    <div key={platform.platform.id} className="platformsAvailableBox">
-                        <img src={
+                    <li key={platform.platform.id} className="platformsAvailableBox">
+                        <img alt={platform.platform.name} src={
                             platform.platform.id === 187 ? ps5 : platform.platform.id === 18 ? ps4 : platform.platform.id === 16 ? ps3
                                 : platform.platform.id === 186 ? xboxSeries : platform.platform.id === 1 ? xbox1 : platform.platform.id === 14 ? xbox360 : platform.platform.id === 7 ? nintendoSwitch
                                 : platform.platform.id === 4 ? pc : platform.platform.id === 21 ? android : platform.platform.id === 3 ? ios : platform.platform.id === 6 ? linux
@@ -38,11 +38,11 @@ function PlatformsContainer({platforms}) {
                                 : platform.platform.id === 11 ? wii : platform.platform.id === 19 ? psVita : platform.platform.id === 15 ? ps2 : platform.platform.id === 17 ? psp
                                 : platform.platform.id === 27 ? ps1  : platform.platform.id === 80 ? xbox : questionMark
                         } />
-                        <h3>{platform.platform.name}</h3>
-                    </div>
+                        <h2>{platform.platform.name}</h2>
+                    </li>
                 ))}
-            </div>
-        </div>
+            </ul>
+        </section>
     );
 }
 

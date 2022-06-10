@@ -10,6 +10,7 @@
     padding: 1rem 0;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    font-size: 2rem;
 }
 
 .headerContainer > img {

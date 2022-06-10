@@ -1,9 +1,10 @@
 .gamesContainer {
-    margin: auto;
-    margin-top: 2.5rem;
+    margin: 2.5rem auto;
+}
+
+.gamesContainer > ul {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 7.2rem;
-    justify-content: center;
-    margin-bottom: 1rem;
+    gap: 7rem;
 }

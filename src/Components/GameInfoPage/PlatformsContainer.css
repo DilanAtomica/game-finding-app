@@ -2,7 +2,7 @@
     margin-top: 1rem;
 }
 
-.platformsContainer > h2 {
+.platformsContainer > h1 {
     background-color: #05386B;
     color: white;
     text-align: center;
@@ -31,15 +31,10 @@
 .platformsAvailableBox > img {
     object-fit: contain;
     height: 5rem;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.platformsAvailableBox > img:hover {
-    transform: scale(1.2);
-}
-
-.platformsAvailableBox > h3 {
+.platformsAvailableBox > h2 {
+    font-size: 1rem;
     padding-top: 1rem;
 }
 

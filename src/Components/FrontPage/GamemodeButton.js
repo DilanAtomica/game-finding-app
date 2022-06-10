@@ -15,12 +15,12 @@ function GamemodeButton({idName, color, gamemodeName, handleGameModes}) {
     }
 
     return (
-    <div className="gamemodeButton">
+    <li className="gamemodeButton">
         <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
-            <div className="gamemodeFront" style={{backgroundColor: color}}><p>{gamemodeName}</p></div>
-            <div className="gamemodeBack" style={{backgroundColor: "gray"}}><p>{gamemodeName}</p></div>
+            <div className="gamemodeFront" style={{backgroundColor: color}}><h2>{gamemodeName}</h2></div>
+            <div className="gamemodeBack" style={{backgroundColor: "gray"}}><h2>{gamemodeName}</h2></div>
         </Button>
-    </div>
+    </li>
 
     );
 }

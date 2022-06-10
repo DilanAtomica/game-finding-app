@@ -12,13 +12,12 @@ function GenreButton({color, genreName, idName, handleGenres}) {
     }
 
     return (
-        <div className="genreButton">
+        <li className="genreButton">
             <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}} variant="contained">
-                <div className="genreFront" style={{backgroundColor: color}}><p>{genreName}</p></div>
-                <div className="genreBack" style={{backgroundColor: "gray"}}><p>{genreName}</p></div>
+                <div className="genreFront" style={{backgroundColor: color}}><h2>{genreName}</h2></div>
+                <div className="genreBack" style={{backgroundColor: "gray"}}><h2>{genreName}</h2></div>
             </Button>
-
-        </div>
+        </li>
     );
 }
 

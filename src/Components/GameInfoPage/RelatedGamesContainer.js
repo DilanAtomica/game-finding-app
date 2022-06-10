@@ -4,10 +4,10 @@ import GamesContainer from "../GamesPage/GamesContainer";
 
 function RelatedGamesContainer({games, getGameInfo}) {
     return (
-        <div className="relatedGamesContainer" style={{display: games.length <= 0 && "none"}}>
-            <h2>Related Games</h2>
+        <section className="relatedGamesContainer" style={{display: games.length <= 0 && "none"}}>
+            <h1>Related Games</h1>
             <GamesContainer  getGameInfo={getGameInfo} games={games} width={"100%"} />
-        </div>
+        </section>
     );
 }
 

@@ -44,11 +44,12 @@ function FavoritesPage(props) {
     }
 
     return (
-        <div className="favoritesPage">
-            <h2>Favorite Games</h2>
-
+        <main className="favoritesPage">
+            <section>
+            <h1>Favorite Games</h1>
             <GamesContainer getGameInfo={getGameInfo} games={favoriteGames} width={"100%"} />
-        </div>
+            </section>
+        </main>
     );
 }
 

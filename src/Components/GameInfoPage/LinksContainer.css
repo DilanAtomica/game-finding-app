@@ -2,7 +2,7 @@
     margin-top: 1rem;
 }
 
-.linksContainer > h2 {
+.linksContainer > h1 {
     background-color: #05386B;
     color: white;
     text-align: center;
@@ -28,6 +28,11 @@
     flex-direction: column;
 }
 
+.linksBox > h2 {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
 .linksBox > a > img {
     width: 5rem;
     height: 5rem;
@@ -41,9 +46,6 @@
     transform: scale(1.2);
 }
 
-.linksBoxTitle {
-    padding-top: 0.5rem;
-}
 
 #redditIcon {
     color: white;

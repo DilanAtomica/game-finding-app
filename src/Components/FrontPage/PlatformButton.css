@@ -18,8 +18,9 @@
     transform: scale(1.2);
 }
 
-.platformButton > h3 {
+.platformButton > h2 {
     padding-top: 1rem;
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -28,9 +29,6 @@
     }
     .platformButton  img {
         height: 7.5rem;
-    }
-    .platformButton > h3 {
-
     }
 }
 
@@ -41,8 +39,8 @@
     .platformButton  img {
         height: 6rem;
     }
-    .platformButton > h3 {
-        font-size: 0.75rem;
+    .platformButton > h2 {
+        font-size: 1rem;
     }
 }
 

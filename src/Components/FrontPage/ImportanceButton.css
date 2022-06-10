@@ -10,6 +10,11 @@
     transform: scale(1.2);
 }
 
+.importanceFront > h2, .importanceBack > h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
 .importanceButton > button {
     width: 100% !important;
     height: 100% !important;

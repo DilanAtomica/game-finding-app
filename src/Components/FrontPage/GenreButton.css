@@ -6,9 +6,13 @@
     transition: 0.3s;
 }
 
-
 .genreButton:hover {
     transform: scale(1.2);
+}
+
+.genreFront > h2, .genreBack > h2 {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .genreButton > button {

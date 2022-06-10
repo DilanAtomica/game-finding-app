@@ -6,7 +6,7 @@
     margin-bottom: 15rem;
 }
 
-#openingHeader1 {
+.opening > h1 {
     font-size: 7rem;
     font-weight: 400;
     text-align: center;
@@ -15,7 +15,7 @@
     opacity: 0;
 }
 
-#openingHeader2 {
+.opening > h2 {
     padding-top: 2rem;
     font-size: 5rem;
     font-weight: 400;
@@ -47,11 +47,11 @@
 
 
 @media only screen and (max-width: 400px) {
-    #openingHeader1 {
+    .opening > h1 {
         font-size: 5rem;
     }
 
-    #openingHeader2 {
+    .opening > h2 {
         font-size: 3rem;
     }
 

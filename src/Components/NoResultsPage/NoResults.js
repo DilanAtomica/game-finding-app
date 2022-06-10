@@ -7,10 +7,10 @@ function NoResults({games}) {
     let navigate = useNavigate();
 
     return (
-        <div className="noResults">
+        <section className="noResults">
             <h1>Sorry, but we could not find anything that met your requirements... 😔 </h1>
             <Button variant="contained" onClick={() => navigate("/")}>Back to homepage</Button>
-        </div>
+        </section>
     );
 }
 

@@ -14,11 +14,11 @@ import {faCircleQuestion, faGamepad} from "@fortawesome/free-solid-svg-icons"
 
 function StoresContainer({gameStores, stores}) {
     return (
-        <div className="storesContainer" style={{display: !gameStores && "none"}}>
-            <h2>Sold by</h2>
-            <div className="stores">
+        <section className="storesContainer" style={{display: !gameStores && "none"}}>
+            <h1>Sold by</h1>
+            <ul className="stores">
                 {stores?.map(store => (
-                    <div className="storeBox" key={store.id}>
+                    <li className="storeBox" key={store.id}>
                         <a href={store.url}><FontAwesomeIcon id="storeIcon" size={"4x"} icon={
                                   store.store_id === 3 ? faPlaystation
                                 : store.store_id === 6 ? faGamepad
@@ -30,13 +30,13 @@ function StoresContainer({gameStores, stores}) {
                                 : faCircleQuestion}
                         /></a>
                         {gameStores?.map(gameStore => (
-                            <h3 key={gameStore.store.id}>{gameStore.id === store.id && gameStore.store?.name}</h3>
+                            <h2 key={gameStore.store.id}>{gameStore.id === store.id && gameStore.store?.name}</h2>
                         ))}
-                    </div>
+                    </li>
                 ))}
 
-            </div>
-        </div>
+            </ul>
+        </section>
     );
 }
 

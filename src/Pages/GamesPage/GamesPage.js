@@ -71,13 +71,13 @@ function GamesPage(props) {
     }
 
     return (
-        <div className="gamesPage" style={{display: loading && "none"}}>
+        <main className="gamesPage" style={{display: loading && "none"}}>
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} games={games} />
 
             <GamesContainer getGameInfo={getGameInfo} games={games} width={"50%"} />
 
             <Pagination pageList={pageList} changePage={changePage} currentPage={currentPage} games={games} />
-        </div>
+        </main>
     );
 }
 
