@@ -62,7 +62,18 @@ function GamesPage(props) {
     };
 
     const changePage = (e) => {
-        const newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
+        let newAPI;
+        if(e.currentTarget.className === "changePage") {
+            newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + e.target.innerText); // replaces page attribute in API to chosen page
+        }
+        else if( e.currentTarget.className === "nextPage") {
+            const nextPageNumber = parseInt(e.currentTarget.id) + 1;
+            newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + nextPageNumber);
+        }
+        else if( e.currentTarget.className === "prevPage") {
+            const prevPageNumber = parseInt(e.currentTarget.id) - 1;
+            newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + prevPageNumber);
+        }
         navigate("/games/" + newAPI);
     };
 

@@ -1,11 +1,11 @@
 .pagination {
     width: 50%;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     height: 1.5rem;
+    margin: auto auto 2rem;
 }
 
 .pagination > ul {
@@ -18,26 +18,48 @@
 
 .pagination > ul > li {
   height: 100%;
+    transition: 0.2s;
 }
+
+.pagination > ul > li:hover {
+    transform: scale(1.2);
+}
+
 
 .pagination > ul > li > button {
-   height: 100%;
-}
-
-.pagination > ul > li > button > h2 {
-    font-weight: 400;
-    font-size: 1.25rem;
-}
-
-.pagesBox {
-    width: 1rem;
     min-width: max-content;
     padding: 1rem;
-    height: 1rem;
-    border-radius: 5px;
+    border-radius: 999px;
     background-color: #05386B;
     color: white;
     text-align: center;
     cursor: pointer;
+    height: 100%;
+    font-weight: 400;
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 900px) {
+    .pagination > ul > li > button {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pagination > ul > li > button {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .pagination > ul > li > button {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
+
+
+
+
