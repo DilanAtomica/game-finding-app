@@ -38,6 +38,10 @@
     padding-top: 1rem;
 }
 
+#dark .platformsAvailableBox > h2 {
+    color: white;
+}
+
 @media only screen and (max-width: 400px) {
     .platformsAvailableBox > img {
         height: 5rem;

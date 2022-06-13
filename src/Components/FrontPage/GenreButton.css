@@ -38,6 +38,7 @@
     transform: rotateY(180deg);
 }
 
+
 @media only screen and (max-width: 900px) {
     .genreButton {
         margin-top: 0.5rem;

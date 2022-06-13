@@ -6,7 +6,6 @@
     align-items: center;
     padding-top: 80px;
     background-color: white;
-
 }
 
 #arrowDown {
@@ -19,6 +18,16 @@
 
 #arrowDown:hover {
     transform: scale(1.2);
+}
+
+/* DARK MODE */
+#dark .frontPage {
+    background-color: #292929;
+}
+
+#dark #arrowDown {
+    background-color: #292929;
+    color: white;
 }
 
 @media only screen and (max-width: 400px) {

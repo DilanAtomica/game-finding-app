@@ -11,7 +11,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #379683;
+    background-color: #5CDB95;
 }
 
 #logo {
@@ -23,8 +23,8 @@ nav {
 
 #favoriteIcon {
     background-color: #5CDB95;
-    color: #05386B;
-    font-size: 4rem;
+    color: #B8192F;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -58,11 +58,37 @@ button {
     background-color: white;
 }
 
-button #searchIcon {
+#searchIcon {
     padding-right: 0.5rem;
     border-radius: 15px;
     color: #05386B;
     background-color: white;
+}
+
+.navRightSide {
+    display: flex;
+    gap: 1rem;
+}
+
+#themeToggler {
+    background-color: #5CDB95;
+    color: #05386B;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+#dark header, #dark header nav, #dark #logo, #dark #favoriteIcon, #dark #themeToggler{
+    background-color: #379683;
+}
+
+#dark .searchBox, #dark .searchBox > input, #dark #searchIcon {
+    background-color: #292929;
+    color: white;
+}
+
+#dark .searchBox > input {
+
 }
 
 @media only screen and (max-width: 900px) {

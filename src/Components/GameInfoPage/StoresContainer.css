@@ -51,3 +51,7 @@
     color: black;
 }
 
+#dark .storeBox > h2 {
+    color: white;
+}
+

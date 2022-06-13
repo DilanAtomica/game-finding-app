@@ -10,6 +10,7 @@ function GamesContainer({games, getGameInfo, width}) {
 
     return (
         <section className="gamesContainer" style={{display: loading && "none", width: width}}>
+            <h2><div className="metaScore">#</div> = Metacritic score</h2>
             <ul>
             {games.map(game => (
                 <Game key={game.id} id={game.id} getGameInfo={getGameInfo} name={game.name} background={game.background_image} metaScore={game.metacritic} releaseDate={game.released}/>

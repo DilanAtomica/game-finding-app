@@ -26,6 +26,10 @@
    transform: scale(1.2);
 }
 
+#dark .finishContainer > h1 {
+    color: white;
+}
+
 @media only screen and (max-width: 400px) {
     .finishContainer {
         padding-top: 14rem;

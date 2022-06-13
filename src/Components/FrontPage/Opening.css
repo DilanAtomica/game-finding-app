@@ -45,6 +45,10 @@
     transform: scale(1.2) !important;
 }
 
+#dark .opening  {
+    color: white;
+}
+
 
 @media only screen and (max-width: 400px) {
     .opening > h1 {

@@ -57,3 +57,11 @@
 #redditIcon:hover {
     transform: scale(1.2);
 }
+
+#dark .linksBox > h2 {
+    color: white;
+}
+
+#dark #redditIcon {
+    color: #292929;
+}

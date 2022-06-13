@@ -25,6 +25,10 @@
     margin-top: 2rem;
 }
 
+#dark .gameModeContainer > h1 {
+    color: white;
+}
+
 @media only screen and (max-width: 900px) {
     .gameModeContainer {
         padding-top: 10rem;

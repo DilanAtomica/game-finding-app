@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+#dark .importanceContainer > h1 {
+    color: white;
+}
+
 @media only screen and (max-width: 400px) {
     .importanceContainer {
         padding-top: 14rem;

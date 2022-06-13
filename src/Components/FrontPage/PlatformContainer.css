@@ -18,7 +18,10 @@
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
+}
 
+#dark .platformContainer > h1 {
+    color: white;
 }
 
 

@@ -1,5 +1,29 @@
 .gamesContainer {
     margin: 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamesContainer > h2 {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+
+.metaScore {
+    width: 2rem;
+    height: 2rem;
+    background-color: #66CC33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    margin: 0.5rem;
 }
 
 .gamesContainer > ul {
@@ -7,4 +31,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7rem;
+}
+
+#dark .gamesContainer > h2 {
+    color: white;
 }

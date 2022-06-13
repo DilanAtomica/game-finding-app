@@ -25,6 +25,10 @@
     flex-direction: column;
 }
 
+#dark .genreContainer > h1 {
+    color: white;
+}
+
 @media only screen and (max-width: 900px) {
     .genreContainer > h1 {
         font-size: 2rem;

@@ -25,3 +25,7 @@
 .noResults > button:hover {
     transform: scale(1.2);
 }
+
+#dark .noResults > h1 {
+    color: white;
+}

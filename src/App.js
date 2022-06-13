@@ -19,6 +19,12 @@ function App() {
 
     const [loading, setLoading] = useState(false);
 
+    const [theme, setTheme] = useState("dark");
+
+    const toggleTheme = () => {
+        setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    }
+
     const activateLoader = () => {
         setLoading(true);
     };
@@ -34,12 +40,12 @@ function App() {
 
 
     return (
-      <AppContext.Provider value={{loading, activateLoader, deActiveLoader}}>
-        <div className="App">
-            <PacmanLoader color="#05386B" loading={loading} css={override} height="100" size={50} />
+      <AppContext.Provider value={{loading, activateLoader, deActiveLoader, theme, toggleTheme}}>
+        <div className="App" id={theme}>
+            <PacmanLoader color={theme === "light" ? "#05386B" : "white"} loading={loading} css={override} height="100" size={50} />
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
+            <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
             <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
             <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
             <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> </>} />
