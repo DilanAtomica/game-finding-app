@@ -54,7 +54,7 @@ function FrontPage(props) {
         string = string + "&page=1";
 
         console.log(string);
-        navigate("/CravePlay/games/" + string);
+        navigate("/games/" + string);
 
     }
 
