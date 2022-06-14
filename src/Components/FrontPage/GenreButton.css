@@ -38,6 +38,13 @@
     transform: rotateY(180deg);
 }
 
+@media only screen and (max-width: 1300px) {
+    .genreButton {
+        margin-top: 0.5rem;
+        width: 13rem;
+        height: 2.75rem;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     .genreButton {

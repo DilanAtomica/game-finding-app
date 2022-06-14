@@ -8,6 +8,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {useContext} from "react";
 import {AppContext} from "../../App";
+import Logo from "../../Images/Logo/logoCravePlay.PNG";
 
 function NavBar(props) {
 
@@ -23,16 +24,16 @@ function NavBar(props) {
     return (
         <header>
             <nav>
-                <button type="button"><SportsEsportsIcon onClick={() => navigate("/")} id="logo" sx={{fontSize: "80px"}} /></button>
+                <button onClick={() => navigate("/")} type="button"><img id="logo" alt="CravePlay logo" src={Logo} /></button>
                 <form onSubmit={handleSubmit} className="searchBox">
                     <input type="text" placeholder="Search for games"  onChange={(e) => setSearchInput(e.target.value)}/>
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
                 </form>
                 <div className="navRightSide">
-                    <button type="button"><FavoriteIcon onClick={() => navigate("/favorites")} id="favoriteIcon"/></button>
-                    {theme === "light"
-                        ? <DarkModeIcon id="themeToggler" style={{color: "black"}} onClick={() => toggleTheme()}/>
-                        : <LightModeIcon id="themeToggler" style={{color: "#FFCC32"}} onClick={() => toggleTheme()} />}
+                    <button  onClick={() => navigate("/favorites")} type="button"><FavoriteIcon id="favoriteIcon"/></button>
+                    <button onClick={() => toggleTheme()}>{theme === "light"
+                        ? <DarkModeIcon id="themeToggler" style={{color: "black"}} />
+                        : <LightModeIcon id="themeToggler" style={{color: "#FFCC32"}}/>}</button>
                 </div>
             </nav>
         </header>

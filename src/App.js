@@ -10,6 +10,7 @@ import {css} from "@emotion/react";
 import GameInfo from "./Pages/GameInfo/GameInfo";
 import FavoritesPage from "./Pages/FavoritesPage/FavoritesPage";
 import NoResultsPage from "./Pages/NoResultsPage/NoResultsPage";
+import Footer from "./Components/Footer/Footer";
 
 
 export const AppContext = createContext();
@@ -46,9 +47,9 @@ function App() {
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
-            <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> </>} />
-            <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> </>} />
-            <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> </>} />
+            <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
+            <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
+            <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
             <Route path="/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
         </Routes>
       </BrowserRouter>

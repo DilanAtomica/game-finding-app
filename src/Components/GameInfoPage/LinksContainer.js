@@ -1,7 +1,7 @@
 import React from 'react';
 import "./LinksContainer.css";
 import metaCriticLogo from "../../Images/Links/metacritic.png";
-import questionMark from "../../Images/Links/questionMark.png";
+import blueQuestionMark from "../../Images/Links/blueQuestionMark.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faReddit} from '@fortawesome/free-brands-svg-icons'
 
@@ -24,7 +24,7 @@ function LinksContainer({redditLink, metaCriticLink, websiteLink, subRedditIcon}
                 }
                 {websiteLink &&
                     <li className="linksBox">
-                        <a href={websiteLink}><img src={subRedditIcon ? subRedditIcon : questionMark} alt="Games website logo" /></a>
+                        <a href={websiteLink}><img src={subRedditIcon ? subRedditIcon : blueQuestionMark} alt="Games website logo" /></a>
                         <h2 className="linksBoxTitle">Games Website</h2>
                     </li>
                 }

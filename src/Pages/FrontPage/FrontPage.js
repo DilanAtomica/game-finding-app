@@ -134,6 +134,7 @@ function FrontPage(props) {
         console.log(preferences)
     }
 
+
     return (
         <main className="frontPage">
 

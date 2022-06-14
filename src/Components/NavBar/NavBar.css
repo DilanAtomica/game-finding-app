@@ -3,6 +3,7 @@ header {
     background-color: #5CDB95;
     position: fixed;
     z-index: 10;
+    padding: 0.5rem;
 }
 
 nav {
@@ -15,10 +16,11 @@ nav {
 }
 
 #logo {
-    background-color: #5CDB95;
-    color: #05386B;
-    font-size: 4rem;
     cursor: pointer;
+    object-fit: contain;
+    height: 2rem;
+    background-color: white;
+    border-radius: 15px;
 }
 
 #favoriteIcon {
@@ -78,17 +80,13 @@ button {
 
 }
 
-#dark header, #dark header nav, #dark #logo, #dark #favoriteIcon, #dark #themeToggler{
+#dark header, #dark header nav, #dark #favoriteIcon, #dark #themeToggler{
     background-color: #379683;
 }
 
 #dark .searchBox, #dark .searchBox > input, #dark #searchIcon {
     background-color: #292929;
     color: white;
-}
-
-#dark .searchBox > input {
-
 }
 
 @media only screen and (max-width: 900px) {

@@ -1,7 +1,8 @@
 .favoritesPage {
     width: 50%;
     margin: auto;
-    padding-top: 6rem;
+    padding-top: 3rem;
+    flex: 1;
 }
 
 .favoritesPage > section > h1 {

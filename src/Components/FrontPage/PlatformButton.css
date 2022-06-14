@@ -27,6 +27,12 @@
     color: white;
 }
 
+@media only screen and (max-width: 1600px) {
+    .platformButton{
+        padding: 0.5rem;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .platformButton{
         padding: 0.5rem;

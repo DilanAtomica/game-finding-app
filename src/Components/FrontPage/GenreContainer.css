@@ -29,6 +29,15 @@
     color: white;
 }
 
+@media only screen and (max-width: 1300px) {
+    .genreContainer > h1 {
+        font-size: 2rem;
+    }
+    .genreContainer {
+        padding-top: 10rem;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .genreContainer > h1 {
         font-size: 2rem;

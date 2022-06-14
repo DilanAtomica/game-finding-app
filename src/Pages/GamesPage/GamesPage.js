@@ -26,7 +26,7 @@ function GamesPage(props) {
 
     const getGamesData = async() => {
         try {
-            const API = "https://api.rawg.io/api/games?key=0bdf9bbe0b33484f82b8ba3ae23aa065&page_size=30" + apiUrl;
+            const API = "https://api.rawg.io/api/games" + process.env.REACT_APP_API_KEY + "&page_size=30" + apiUrl;
             console.log(API);
             const response = await axios.get(API);
             const results = response.data.results;

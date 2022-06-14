@@ -26,7 +26,7 @@ function FavoritesPage(props) {
             let list = [];
 
             await Promise.all(games.map(async game => {
-                const API = "https://api.rawg.io/api/games/" + game + "?key=0bdf9bbe0b33484f82b8ba3ae23aa065";
+                const API = "https://api.rawg.io/api/games/" + game + process.env.REACT_APP_API_KEY;
                 const response = await axios.get(API);
 
                 list.push(response.data);

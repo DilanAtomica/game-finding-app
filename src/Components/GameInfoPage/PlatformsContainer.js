@@ -20,7 +20,7 @@ import psVita from "../../Images/Platforms/psVita.png";
 import ps2 from "../../Images/Platforms/ps2.png";
 import psp from "../../Images/Platforms/psp.png";
 import ps1 from "../../Images/Platforms/ps1.png";
-import questionMark from "../../Images/Links/questionMark.png";
+import blueQuestionMark from "../../Images/Links/blueQuestionMark.png";
 
 
 function PlatformsContainer({platforms}) {
@@ -36,7 +36,7 @@ function PlatformsContainer({platforms}) {
                                 : platform.platform.id === 4 ? pc : platform.platform.id === 21 ? android : platform.platform.id === 3 ? ios : platform.platform.id === 6 ? linux
                                 : platform.platform.id === 5 ? macOS : platform.platform.id === 9 ? nintendoDS : platform.platform.id === 83 ? nintendo64
                                 : platform.platform.id === 11 ? wii : platform.platform.id === 19 ? psVita : platform.platform.id === 15 ? ps2 : platform.platform.id === 17 ? psp
-                                : platform.platform.id === 27 ? ps1  : platform.platform.id === 80 ? xbox : questionMark
+                                : platform.platform.id === 27 ? ps1  : platform.platform.id === 80 ? xbox : blueQuestionMark
                         } />
                         <h2>{platform.platform.name}</h2>
                     </li>
