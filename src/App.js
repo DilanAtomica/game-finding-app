@@ -20,7 +20,7 @@ function App() {
 
     const [loading, setLoading] = useState(false);
 
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState("light");
 
     const toggleTheme = () => {
         setTheme((curr) => (curr === "light" ? "dark" : "light"));

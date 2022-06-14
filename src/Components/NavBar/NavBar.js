@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import "./NavBar.css";
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
 import {useNavigate} from "react-router-dom";
@@ -26,7 +25,7 @@ function NavBar(props) {
             <nav>
                 <button onClick={() => navigate("/")} type="button"><img id="logo" alt="CravePlay logo" src={Logo} /></button>
                 <form onSubmit={handleSubmit} className="searchBox">
-                    <input type="text" placeholder="Search for games"  onChange={(e) => setSearchInput(e.target.value)}/>
+                    <input type="text" placeholder="Search for games"  onChange={(e) => setSearchInput(e.target.value)} required/>
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
                 </form>
                 <div className="navRightSide">
