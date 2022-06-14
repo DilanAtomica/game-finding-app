@@ -46,11 +46,11 @@ function App() {
             <PacmanLoader color={theme === "light" ? "#05386B" : "white"} loading={loading} css={override} height="100" size={50} />
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
-            <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
-            <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
-            <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
-            <Route path="/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
+            <Route path="/CravePlay" element={<> <NavBar /> <FrontPage /> </>} />
+            <Route path="/CravePlay/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
+            <Route path="/CravePlay/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
+            <Route path="/CravePlay/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
+            <Route path="/CravePlay/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
         </Routes>
       </BrowserRouter>
         </div>
