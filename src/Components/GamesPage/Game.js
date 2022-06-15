@@ -19,7 +19,7 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
     }, [hearted]);
 
     const updateHeart = () => {
-        let games = JSON.parse(localStorage.getItem("gameID"));
+        let games = JSON.parse(sessionStorage.getItem("gameID"));
         if(games.includes(id)) setHearted(true);
     }
 
@@ -35,7 +35,7 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
     }
 
     const handleFavoriteClick = ()=> {
-        let games = JSON.parse(localStorage.getItem("gameID"));
+        let games = JSON.parse(sessionStorage.getItem("gameID"));
         if(games === null || games.length === 0) {
             games = [id];
         }
@@ -44,7 +44,7 @@ function Game({name, background, metaScore, releaseDate, id, getGameInfo}) {
         } else {
             games.push(id);
         }
-        localStorage.setItem("gameID", JSON.stringify(games));
+        sessionStorage.setItem("gameID", JSON.stringify(games));
         setHearted(!hearted);
     }
 
