@@ -14,17 +14,6 @@
     text-align: center;
 }
 
-.modeOptions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gameModeContainer > button {
-    margin-top: 2rem;
-}
-
 #dark .gameModeContainer > h1 {
     color: white;
 }
@@ -38,5 +27,9 @@
 @media only screen and (max-width: 400px) {
     .gameModeContainer {
         padding-top: 8rem;
+    }
+
+    .gameModeContainer > h1 {
+        font-size: 2rem;
     }
 }

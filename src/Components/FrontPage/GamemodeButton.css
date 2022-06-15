@@ -40,6 +40,17 @@
     transform: rotateY(180deg);
 }
 
+@media only screen and (max-width: 400px) {
+    .gamemodeButton {
+        width: 15rem;
+        height: 3rem;
+    }
+
+    .gamemodeFront > h2, .gamemodeBack > h2 {
+        font-size: 1.5rem;
+    }
+}
+
 
 
 

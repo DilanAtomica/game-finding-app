@@ -29,4 +29,8 @@
     .importanceContainer {
         padding-top: 8rem;
     }
+
+    .importanceContainer > h1 {
+        font-size: 2rem;
+    }
 }
