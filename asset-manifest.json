@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/craveplay/static/css/main.03e1e1d5.css",
+    "main.css": "/craveplay/static/css/main.3460d17a.css",
     "main.js": "/craveplay/static/js/main.d9000823.js",
     "static/js/787.a3dba723.chunk.js": "/craveplay/static/js/787.a3dba723.chunk.js",
     "static/media/nintendoDS.png": "/craveplay/static/media/nintendoDS.4f1a544e9035e933c0f6.png",
@@ -31,12 +31,12 @@
     "static/media/metacritic.png": "/craveplay/static/media/metacritic.71e7e12254f73fa8abc3.png",
     "static/media/logoCravePlay.PNG": "/craveplay/static/media/logoCravePlay.88872496e03f9672d3af.PNG",
     "index.html": "/craveplay/index.html",
-    "main.03e1e1d5.css.map": "/craveplay/static/css/main.03e1e1d5.css.map",
+    "main.3460d17a.css.map": "/craveplay/static/css/main.3460d17a.css.map",
     "main.d9000823.js.map": "/craveplay/static/js/main.d9000823.js.map",
     "787.a3dba723.chunk.js.map": "/craveplay/static/js/787.a3dba723.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03e1e1d5.css",
+    "static/css/main.3460d17a.css",
     "static/js/main.d9000823.js"
   ]
 }
