@@ -18,6 +18,7 @@ function GamesPage(props) {
     const [pageList, setPageList] = useState([]);
 
     useEffect(() => {
+        if(window.location.href.slice(-1) === "?") navigate(-1);
         if(apiUrl === undefined) return
         activateLoader();
         window.scrollTo(0, 0);
