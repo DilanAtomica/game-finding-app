@@ -43,10 +43,12 @@
 @media only screen and (max-width: 400px) {
     .importanceButton {
         height: 3rem;
+        width: 19rem;
     }
 
-    .gamemodeFront > h2, .gamemodeBack > h2 {
+    .importanceFront > h2, .importanceBack > h2 {
         font-size: 1.5rem;
+
     }
 }
 
