@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/craveplay/static/css/main.21a30caa.css",
-    "main.js": "/craveplay/static/js/main.d4510606.js",
+    "main.js": "/craveplay/static/js/main.88fe439b.js",
     "static/js/787.a3dba723.chunk.js": "/craveplay/static/js/787.a3dba723.chunk.js",
     "static/media/nintendoDS.png": "/craveplay/static/media/nintendoDS.4f1a544e9035e933c0f6.png",
     "static/media/psp.png": "/craveplay/static/media/psp.fec2a4c6b51c28113f48.png",
@@ -32,11 +32,11 @@
     "static/media/logoCravePlay.PNG": "/craveplay/static/media/logoCravePlay.88872496e03f9672d3af.PNG",
     "index.html": "/craveplay/index.html",
     "main.21a30caa.css.map": "/craveplay/static/css/main.21a30caa.css.map",
-    "main.d4510606.js.map": "/craveplay/static/js/main.d4510606.js.map",
+    "main.88fe439b.js.map": "/craveplay/static/js/main.88fe439b.js.map",
     "787.a3dba723.chunk.js.map": "/craveplay/static/js/787.a3dba723.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21a30caa.css",
-    "static/js/main.d4510606.js"
+    "static/js/main.88fe439b.js"
   ]
 }
