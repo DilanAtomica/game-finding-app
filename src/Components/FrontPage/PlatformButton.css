@@ -47,10 +47,10 @@
         padding: 0.25rem;
     }
     .platformButton  img {
-        height: 6rem;
+        height: 5rem;
     }
     .platformButton > h2 {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }
 

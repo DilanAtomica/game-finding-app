@@ -11,7 +11,7 @@
 #arrowDown {
     background-color: white;
     font-size: 60px;
-    margin-top: 1rem;
+
     cursor: pointer;
     transition: 0.3s;
 }

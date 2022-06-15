@@ -58,7 +58,12 @@
     .genreButton {
         margin-top: 0.5rem;
         width: 9rem;
-        height: 2.25rem;
+        height: 1.5rem;
+    }
+
+    .genreFront > h2, .genreBack > h2 {
+        font-size: 0.7rem;
+        font-weight: 400;
     }
 }
 

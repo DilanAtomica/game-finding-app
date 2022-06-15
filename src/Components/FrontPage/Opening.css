@@ -16,11 +16,11 @@
 }
 
 .opening > h2 {
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: 5rem;
     font-weight: 400;
     text-align: center;
-    padding-bottom: 1rem;
+
     transform: translateX(100%);
     transition: 2s;
     opacity: 0;
@@ -52,11 +52,11 @@
 
 @media only screen and (max-width: 400px) {
     .opening > h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .opening > h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     #startButton {
