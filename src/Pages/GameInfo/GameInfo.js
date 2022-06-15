@@ -39,30 +39,30 @@ function GameInfo(props) {
     }, [gameID]);
 
     const getGameInfo = async() => {
-        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + process.env.REACT_APP_API_KEY);
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "?key=f8fa9d6de03342b6938543ce43d69dd6");
         console.log(response.data);
         setGame(response.data);
         deActiveLoader();
     }
 
     const getScreenShots = async() => {
-        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/screenshots" + process.env.REACT_APP_API_KEY);
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/screenshots" + "?key=f8fa9d6de03342b6938543ce43d69dd6");
         setScreenShots(response.data.results);
     }
 
     const getStores = async() => {
-        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/stores" + process.env.REACT_APP_API_KEY);
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/stores" + "?key=f8fa9d6de03342b6938543ce43d69dd6");
         setStores(response.data.results);
     }
 
     const getRelatedGames = async() => {
-        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/game-series" + process.env.REACT_APP_API_KEY);
+        const response = await axios.get("https://api.rawg.io/api/games/" + gameID + "/game-series" + "?key=f8fa9d6de03342b6938543ce43d69dd6");
         setRelatedGames(response.data.results);
         console.log(response.data.results)
     }
 
     const getRelatedGameDetails = (gameID) => {
-        navigate("/gameinfo/" + gameID);
+        navigate("/craveplay/gameinfo/" + gameID);
     }
 
     return (

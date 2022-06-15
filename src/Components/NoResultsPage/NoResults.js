@@ -9,7 +9,7 @@ function NoResults({games}) {
     return (
         <section className="noResults">
             <h1>Sorry, but we could not find anything that met your requirements... 😔 </h1>
-            <Button variant="contained" onClick={() => navigate("/")}>Back to homepage</Button>
+            <Button variant="contained" onClick={() => navigate("/craveplay")}>Back to homepage</Button>
         </section>
     );
 }

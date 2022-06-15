@@ -26,18 +26,18 @@ function GamesPage(props) {
 
     const getGamesData = async() => {
         try {
-            const API = "https://api.rawg.io/api/games" + process.env.REACT_APP_API_KEY + "&page_size=30" + apiUrl;
+            const API = "https://api.rawg.io/api/games" + "?key=f8fa9d6de03342b6938543ce43d69dd6" + "&page_size=30" + apiUrl;
             console.log(API);
             const response = await axios.get(API);
             const results = response.data.results;
-            results.length === 0 && navigate("/noresults");
+            results.length === 0 && navigate("/craveplay/noresults");
 
             setGames(results);
             getPages(results.length);
             deActiveLoader();
         } catch {
             console.log("Error")
-            navigate("/noresults");
+            navigate("/craveplay/noresults");
         }
     }
 
@@ -74,11 +74,11 @@ function GamesPage(props) {
             const prevPageNumber = parseInt(e.currentTarget.id) - 1;
             newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + prevPageNumber);
         }
-        navigate("/games/" + newAPI);
+        navigate("/craveplay/games/" + newAPI);
     };
 
     const getGameInfo = (gameID) => {
-        navigate("/gameinfo/" + gameID);
+        navigate("/craveplay/gameinfo/" + gameID);
     }
 
     return (
