@@ -1,6 +1,6 @@
 import './App.css';
 import {useState, createContext} from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import FrontPage from "./Pages/FrontPage/FrontPage";
 import NavBar from "./Components/NavBar/NavBar";
 import GamesPage from "./Pages/GamesPage/GamesPage";
@@ -44,15 +44,15 @@ function App() {
       <AppContext.Provider value={{loading, activateLoader, deActiveLoader, theme, toggleTheme}}>
         <div className="App" id={theme}>
             <PacmanLoader color={theme === "light" ? "#05386B" : "white"} loading={loading} css={override} height="100" size={50} />
-        <BrowserRouter>
+        <HashRouter>
         <Routes>
-            <Route path="/craveplay" element={<> <NavBar /> <FrontPage /> </>} />
+            <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
             <Route path="/craveplay/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
             <Route path="/craveplay/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
             <Route path="/craveplay/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
             <Route path="/craveplay/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
         </div>
       </AppContext.Provider>
   );

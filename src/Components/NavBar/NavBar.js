@@ -23,7 +23,7 @@ function NavBar(props) {
     return (
         <header>
             <nav>
-                <button onClick={() => navigate("/craveplay")} type="button"><img id="logo" alt="CravePlay logo" src={Logo} /></button>
+                <button onClick={() => navigate("/")} type="button"><img id="logo" alt="CravePlay logo" src={Logo} /></button>
                 <form onSubmit={handleSubmit} className="searchBox">
                     <input type="text" placeholder="Search for games"  onChange={(e) => setSearchInput(e.target.value)} required/>
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
