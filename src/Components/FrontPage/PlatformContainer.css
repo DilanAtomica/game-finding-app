@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 15rem;
-    padding-top: 7.5rem;
+    padding-top: 7rem;
 }
 
 .platformContainer > h1 {
@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 400px) {
     .platformContainer > h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
    .platforms{
        gap: 0;
