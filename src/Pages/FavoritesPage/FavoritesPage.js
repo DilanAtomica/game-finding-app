@@ -21,7 +21,12 @@ function FavoritesPage(props) {
 
     const getFavoriteGamesData = async() => {
         try {
-            const games = JSON.parse(sessionStorage.getItem("gameID"));
+            const games = JSON.parse(localStorage.getItem("gameID"));
+
+            if(games === null) {
+                deActiveLoader();
+                return
+            }
 
             let list = [];
 

@@ -45,7 +45,7 @@ function GamesPage(props) {
         const currentPageNumber = parseInt(apiUrl.split("=").pop()); //Gets the characters after the last "=" which shows page number
 
         let pageList;
-        console.log(pageSize)
+
         if(pageSize < 30) {
             pageList = [currentPageNumber - 4, currentPageNumber - 3, currentPageNumber - 2, currentPageNumber -1,
                 currentPageNumber];
