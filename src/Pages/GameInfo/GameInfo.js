@@ -67,7 +67,7 @@ function GameInfo(props) {
 
     return (
         <main className="gameInfo" style={{display: loading && "none"}}>
-            <HeaderContainer name={game?.name} background={game?.background_image} description={game?.description_raw} />
+            <HeaderContainer name={game?.name} background={game?.background_image} description={game?.description_raw} releaseDate={game?.released}  metaScore={game.metacritic} id={game.id} />
 
             <DetailsContainer release={game?.released} genres={game?.genres} developers={game?.developers}/>
 

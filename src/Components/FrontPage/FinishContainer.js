@@ -10,7 +10,7 @@ function FinishContainer({createAPI}) {
 
     return (
         <section className="finishContainer" id="phaseFive">
-            <h1>You are now ready to begin your search!</h1>
+            <h1>You are now ready to see the result!</h1>
             <Button type="button" onClick={handleClick} variant="contained">Find the perfect game</Button>
         </section>
     );

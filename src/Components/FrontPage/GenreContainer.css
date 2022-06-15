@@ -4,6 +4,7 @@
     align-items: center;
     margin-bottom: 15rem;
     padding-top: 15rem;
+
 }
 
 .genreContainer > h1 {
@@ -46,7 +47,7 @@
 
 @media only screen and (max-width: 400px) {
     .genreContainer {
-        padding-top: 8rem;
+        padding-top: 7rem;
     }
     .genreContainer > h1 {
         font-size: 2rem;

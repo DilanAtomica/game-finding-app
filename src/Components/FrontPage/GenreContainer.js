@@ -42,7 +42,7 @@ function GenreContainer({handleGenres}) {
                     <GenreButton handleGenres={handleGenres} idName="indie" color="#A31621" genreName="Indie" />
                 </ul>
             </ul>
-            <Link to="phaseThree" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
+            <Link to="phaseThree" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
         </section>
     );
 }

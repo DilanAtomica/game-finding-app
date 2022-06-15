@@ -27,7 +27,7 @@ function PlatformContainer({handlePlatforms}) {
                 <PlatformButton handlePlatforms={handlePlatforms} idName="7" platformName="Nintendo Switch" srcName={nintendoSwitch} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName={pc}/>
             </ul>
-            <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
+            <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
         </section>
     );
 }

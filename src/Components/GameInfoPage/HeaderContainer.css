@@ -20,6 +20,51 @@
     display:block;
 }
 
+.headerContainerInfoExtension {
+    background-color: #05386B;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContainerInfoExtension  h2 {
+    font-size: 1rem;
+}
+
+.headerContainerInfoExtension > .metaScore {
+    width: 2rem;
+    height: 2rem;
+    background-color: #66CC33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    margin: 0.5rem;
+}
+
+.headerContainerInfoExtension > .releaseYear {
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0.5rem;
+    color: white;
+    margin: 0.5rem;
+}
+
+.headerContainerInfoExtension > .heartIcons > button > .heartBorderIcon {
+    font-size: 2.75rem !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.headerContainerInfoExtension > .heartIcons > button >  .heartFullIcon {
+    font-size: 2.75rem !important;
+    color: #B8192F !important;
+    cursor: pointer !important;
+}
+
 .headerContainer > h2 {
     background-color: #05386B;
     color: white;

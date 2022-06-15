@@ -8,26 +8,24 @@
     background-color: white;
 }
 
-#arrowDown {
-    background-color: white;
-    font-size: 60px;
-
+#proceedButton {
+    border-radius: 999px;
+    background-color: #05386B;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#arrowDown:hover {
+#proceedButton:hover {
     transform: scale(1.2);
 }
 
 /* DARK MODE */
 #dark .frontPage {
     background-color: #292929;
-}
-
-#dark #arrowDown {
-    background-color: #292929;
-    color: white;
 }
 
 @media only screen and (max-width: 400px) {

@@ -15,7 +15,7 @@ function GameModeContainer({handleGameModes}) {
                 <GamemodeButton handleGameModes={handleGameModes} idName="multiplayer" color="#0A1045" gamemodeName="Multiplayer" />
                 <GamemodeButton handleGameModes={handleGameModes} idName="co-op" color="#00C2D1" gamemodeName="Co-op" />
             </ul>
-            <Link to="phaseFour" spy={true} smooth={true} offset={50} duration={1000}><button type="button"><ArrowDownwardIcon id="arrowDown" /></button></Link>
+            <Link to="phaseFour" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
         </section>
     );
 }
