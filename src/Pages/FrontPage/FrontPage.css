@@ -24,7 +24,7 @@
     height: 90%;
 }
 
-.frontPage .swiper-button-next, .swiper-button-prev {
+.frontPage .swiper-button-next, .frontPage .swiper-button-prev {
     display: none !important;
 }
 

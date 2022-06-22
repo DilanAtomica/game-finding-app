@@ -23,6 +23,11 @@
     font-size: 1rem;
 }
 
+#checkIcon {
+    color: green;
+    opacity: 1;
+}
+
 #dark .platformButton > h2 {
     color: white;
 }

@@ -161,6 +161,7 @@ function FrontPage(props) {
                         spaceBetween={50}
                         navigation
                         pagination={{ clickable: true }}
+                        allowTouchMove={false}
                 >
                     <SwiperSlide><PlatformContainer handlePlatforms={handlePlatforms} /></SwiperSlide>
                     <SwiperSlide><GenreContainer handleGenres={handleGenres} /></SwiperSlide>
