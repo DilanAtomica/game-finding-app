@@ -154,7 +154,7 @@ function FrontPage(props) {
         <main className="frontPage">
            <Opening startFiltering={startFiltering} started={started} />
 
-            <div className="carousel" style={{display: !started && "none"}}>
+            <div className="carousel" style={{opacity: started && "1", height: started && "80vh"}}>
                 <Swiper id="swiper"
                         modules={[Navigation, A11y, Pagination]}
                         slidesPerView={1}
@@ -170,7 +170,7 @@ function FrontPage(props) {
                     <SwiperSlide><FinishContainer createAPI={createAPI} /></SwiperSlide>
                 </Swiper>
             </div>
-            <div className="sliderButtons"style={{display: !started && "none"}}>
+            <div className="sliderButtons" style={{opacity: started && "1", height: !started && "0"}}>
                 <button onClick={handleClick} id="backButton" className="proceedButton" type="button">Back</button>
                 <button onClick={handleClick}  id="NextButton" className="proceedButton" type="button" >Next</button>
             </div>
