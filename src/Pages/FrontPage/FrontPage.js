@@ -17,11 +17,7 @@ function FrontPage(props) {
     const {deActiveLoader} = useContext(AppContext);
     let navigate = useNavigate();
 
-    const [platforms, setPlatforms] = useState([]);
-    const [genres, setGenres] = useState([]);
-    const [gameModes, setGameModes] = useState([]);
-    const [preferences, setPreferences] = useState([]);
-
+    const [filters, setFilters] = useState({platforms: [], genres: [], gameModes: [], preferences: []});
     const [started, setStarted] = useState(false);
 
     useEffect(() => {
@@ -32,32 +28,30 @@ function FrontPage(props) {
     const createAPI = () => {
         let string = "";
 
-        if( genres.length !== 0) string = string + "&genres=";
-        genres.map(genre => {
+        if(filters.genres.length !== 0) string = string + "&genres=";
+        filters.genres.map(genre => {
             string = string + genre + ",";
         });
-        if( genres.length !== 0) string = string.slice(0, -1);
+        if(filters.genres.length !== 0) string = string.slice(0, -1);
 
-        if( platforms.length !== 0) string = string + "&platforms=";
-        platforms.map(platform => {
+        if(filters.platforms.length !== 0) string = string + "&platforms=";
+        filters.platforms.map(platform => {
             string = string + platform + ",";
         });
-        if( platforms.length !== 0)string = string.slice(0, -1);
+        if(filters.platforms.length !== 0)string = string.slice(0, -1);
 
-        if( preferences.length !== 0 || gameModes.length !== 0) string = string + "&tags=";
+        if(filters.preferences.length !== 0 || filters.gameModes.length !== 0) string = string + "&tags=";
 
-        gameModes.map(mode => {
+        filters.gameModes.map(mode => {
             string = string + mode + ",";
         });
 
-        preferences.map(preference => {
+        filters.preferences.map(preference => {
             string = string + preference + ",";
         });
-        if( preferences.length !== 0)string = string.slice(0, -1);
+        if(filters.preferences.length !== 0)string = string.slice(0, -1);
 
         string = string + "&page=1";
-
-        console.log(string);
         navigate("/craveplay/games/" + string);
 
     }
@@ -66,76 +60,71 @@ function FrontPage(props) {
     const handlePlatforms = (platform) => {
         let alreadyClicked = false;
 
-        platforms.map(console => {
+        filters.platforms.map(console => {
             if(console === platform) {
                 alreadyClicked = true;
             }
         });
 
         if(alreadyClicked) {
-            const newList = platforms.filter(console => console !== platform);
-            setPlatforms([...newList]);
+            const newList = filters.platforms.filter(console => console !== platform);
+            setFilters({...filters, platforms: [...newList]})
         } else {
-            setPlatforms([...platforms, platform]);
+            setFilters({...filters, platforms: [...filters.platforms, platform]})
         }
-
-        console.log(platforms)
     }
 
     const handleGenres = (chosenGenre) => {
         let alreadyClicked = false;
 
-        genres.map(genre => {
+        filters.genres.map(genre => {
             if(genre === chosenGenre) {
                 alreadyClicked = true;
             }
         });
 
         if(alreadyClicked) {
-            const newList = genres.filter(genre => genre !== chosenGenre);
-            setGenres([...newList]);
+            const newList = filters.genres.filter(genre => genre !== chosenGenre);
+            setFilters({...filters, genres: [...newList]})
         } else {
-            setGenres([...genres, chosenGenre]);
+            setFilters({...filters, genres: [...filters.genres, chosenGenre]})
         }
-        console.log(genres)
+
     }
 
     const handleGameModes = (gameMode) => {
         let alreadyClicked = false;
 
-        gameModes.map(mode => {
+        filters.gameModes.map(mode => {
             if(mode === gameMode) {
                 alreadyClicked = true;
             }
         });
 
         if(alreadyClicked) {
-            const newList = gameModes.filter(mode => mode !== gameMode);
-            setGameModes([...newList]);
+            const newList = filters.gameModes.filter(mode => mode !== gameMode);
+            setFilters({...filters, gameModes: [...newList]})
         } else {
-            setGameModes([...gameModes, gameMode]);
+            setFilters({...filters, gameModes: [...filters.gameModes, gameMode]})
         }
 
-        console.log(gameModes)
     }
 
     const handlePreferences = (chosenPreference) => {
         let alreadyClicked = false;
 
-        preferences.map(preference => {
+        filters.preferences.map(preference => {
             if(chosenPreference === preference) {
                 alreadyClicked = true;
             }
         });
 
         if(alreadyClicked) {
-            const newList = preferences.filter(preference => preference !== chosenPreference);
-            setPreferences([...newList]);
+            const newList = filters.preferences.filter(preference => preference !== chosenPreference);
+            setFilters({...filters, preferences: [...newList]})
         } else {
-            setPreferences([...preferences, chosenPreference]);
-        }
+            setFilters({...filters, preferences: [...filters.preferences, chosenPreference]})        }
 
-        console.log(preferences)
     }
 
    const handleClick = (e) => {
