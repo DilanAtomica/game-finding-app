@@ -20,7 +20,7 @@ function ScreenShotsContainer({screenShots, screenShotsCount}) {
                             pagination={{ clickable: true }}
                     >
                         {screenShots?.map(shot => (
-                            <SwiperSlide key={shot.id}><img className="carouselImg" src={shot.image} alt="screenshot" /></SwiperSlide>
+                            <SwiperSlide id="swiperSlide" key={shot.id}><img className="carouselImg" src={shot.image} alt="screenshot" /></SwiperSlide>
                         ))}
                     </Swiper>
                 </div>

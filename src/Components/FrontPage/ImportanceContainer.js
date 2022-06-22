@@ -1,9 +1,6 @@
 import React from 'react';
-import {motion} from "framer-motion";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import "./ImportanceContainer.css";
 import ImportanceButton from "./ImportanceButton";
-import {Link} from "react-scroll";
 
 
 function ImportanceContainer({handlePreferences}) {
@@ -16,7 +13,6 @@ function ImportanceContainer({handlePreferences}) {
                 <ImportanceButton handlePreferences={handlePreferences} idName="atmospheric" color="#0099DD" importanceName="Atmospheric" />
                 <ImportanceButton handlePreferences={handlePreferences} idName="full-controller-support" color="#FF9933" importanceName="Controller support" />
             </ul>
-            <Link to="phaseFive" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
 
         </section>
     );

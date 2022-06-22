@@ -1,25 +1,56 @@
 .frontPage {
     margin: auto;
-    width: 50%;
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-    background-color: white;
 }
 
-#proceedButton {
+.frontPage .carousel {
+    width: 100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 80vh;
+}
+
+
+.frontPage .carousel #swiper {
+    width: 100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 90%;
+}
+
+.frontPage .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+}
+
+.sliderButtons {
+    position: absolute;
+    top: 70%;
+    display: flex;
+    z-index: 10;
+}
+
+#backButton {
+    margin-right: 2.5rem;
+}
+
+.proceedButton {
     border-radius: 999px;
     background-color: #05386B;
     color: white;
     font-size: 2rem;
+    width: max-content;
     padding: 0.5rem 1rem;
-    margin-top: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#proceedButton:hover {
+.proceedButton:hover {
     transform: scale(1.2);
 }
 
@@ -31,6 +62,10 @@
 @media only screen and (max-width: 400px) {
     .frontPage {
         width: 100%;
+    }
+
+    .proceedButton {
+        font-size: 1rem;
     }
 }
 

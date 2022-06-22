@@ -1,8 +1,6 @@
 import React from 'react';
 import "./GenreContainer.css";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import GenreButton from "./GenreButton";
-import {Link} from "react-scroll";
 
 function GenreContainer({handleGenres}) {
 
@@ -42,7 +40,6 @@ function GenreContainer({handleGenres}) {
                     <GenreButton handleGenres={handleGenres} idName="indie" color="#A31621" genreName="Indie" />
                 </ul>
             </ul>
-            <Link to="phaseThree" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
         </section>
     );
 }

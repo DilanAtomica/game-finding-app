@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15rem;
-    padding-top: 17.5rem;
 }
 
 .gameModeContainer > h1 {
@@ -18,16 +16,7 @@
     color: white;
 }
 
-@media only screen and (max-width: 900px) {
-    .gameModeContainer {
-        padding-top: 10rem;
-    }
-}
-
 @media only screen and (max-width: 400px) {
-    .gameModeContainer {
-        padding-top: 8rem;
-    }
 
     .gameModeContainer > h1 {
         font-size: 2rem;

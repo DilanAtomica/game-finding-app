@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30rem;
+
 }
 
 .finishContainer > h1 {
@@ -31,9 +31,6 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .finishContainer {
-        padding-top: 14rem;
-    }
 
     .finishContainer > button {
       font-size: 22.5px !important;

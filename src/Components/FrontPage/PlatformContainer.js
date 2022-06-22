@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import "./PlatformContainer.css";
 import PlatformButton from "./PlatformButton";
-import {Link} from "react-scroll";
 import ps5 from "../../Images/Platforms/ps5.png";
 import ps4 from "../../Images/Platforms/ps4.png";
 import ps3 from "../../Images/Platforms/ps3.png";
@@ -12,7 +10,8 @@ import xboxSeries from "../../Images/Platforms/xboxSeries.png";
 import nintendoSwitch from "../../Images/Platforms/nintendoSwitch.png";
 import pc from "../../Images/Platforms/pc.png";
 
-function PlatformContainer({handlePlatforms}) {
+function PlatformContainer({handlePlatforms, previousSlide}) {
+
 
     return (
         <section className="platformContainer" id="phaseOne">
@@ -27,7 +26,6 @@ function PlatformContainer({handlePlatforms}) {
                 <PlatformButton handlePlatforms={handlePlatforms} idName="7" platformName="Nintendo Switch" srcName={nintendoSwitch} />
                 <PlatformButton handlePlatforms={handlePlatforms} idName="4" platformName="PC" srcName={pc}/>
             </ul>
-            <Link to="phaseTwo" spy={true} smooth={true} offset={50} duration={1000}><button type="button" id="proceedButton">Proceed</button></Link>
         </section>
     );
 }

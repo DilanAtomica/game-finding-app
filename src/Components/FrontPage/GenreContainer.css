@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15rem;
-    padding-top: 15rem;
-
 }
 
 .genreContainer > h1 {
@@ -34,9 +31,7 @@
     .genreContainer > h1 {
         font-size: 2rem;
     }
-    .genreContainer {
-        padding-top: 10rem;
-    }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -46,9 +41,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .genreContainer {
-        padding-top: 7rem;
-    }
+
     .genreContainer > h1 {
         font-size: 2rem;
     }

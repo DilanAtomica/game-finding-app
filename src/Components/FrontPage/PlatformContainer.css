@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15rem;
-    padding-top: 7rem;
 }
 
 .platformContainer > h1 {

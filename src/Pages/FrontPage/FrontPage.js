@@ -8,6 +8,8 @@ import GenreContainer from "../../Components/FrontPage/GenreContainer";
 import GameModeContainer from "../../Components/FrontPage/GameModeContainer";
 import ImportanceContainer from "../../Components/FrontPage/ImportanceContainer";
 import FinishContainer from "../../Components/FrontPage/FinishContainer";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {A11y, Navigation, Pagination} from "swiper";
 
 
 function FrontPage(props) {
@@ -19,6 +21,8 @@ function FrontPage(props) {
     const [genres, setGenres] = useState([]);
     const [gameModes, setGameModes] = useState([]);
     const [preferences, setPreferences] = useState([]);
+
+    const [started, setStarted] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -134,21 +138,42 @@ function FrontPage(props) {
         console.log(preferences)
     }
 
+   const handleClick = (e) => {
+       if(e.currentTarget.id === "backButton") {
+           document.getElementsByClassName("swiper-button-prev")[0].click();
+       } else {
+           document.getElementsByClassName("swiper-button-next")[0].click();
+       }
+   }
+
+   const startFiltering = () => {
+        setStarted(true);
+   }
 
     return (
         <main className="frontPage">
+           <Opening startFiltering={startFiltering} started={started} />
 
-            <Opening />
+            <div className="carousel" style={{display: !started && "none"}}>
+                <Swiper id="swiper"
+                        modules={[Navigation, A11y, Pagination]}
+                        slidesPerView={1}
+                        spaceBetween={50}
+                        navigation
+                        pagination={{ clickable: true }}
+                >
+                    <SwiperSlide><PlatformContainer handlePlatforms={handlePlatforms} /></SwiperSlide>
+                    <SwiperSlide><GenreContainer handleGenres={handleGenres} /></SwiperSlide>
+                    <SwiperSlide><GameModeContainer handleGameModes={handleGameModes} /></SwiperSlide>
+                    <SwiperSlide><ImportanceContainer handlePreferences={handlePreferences} /></SwiperSlide>
+                    <SwiperSlide><FinishContainer createAPI={createAPI} /></SwiperSlide>
+                </Swiper>
+            </div>
+            <div className="sliderButtons"style={{display: !started && "none"}}>
+                <button onClick={handleClick} id="backButton" className="proceedButton" type="button">Back</button>
+                <button onClick={handleClick}  id="NextButton" className="proceedButton" type="button" >Next</button>
+            </div>
 
-            <PlatformContainer handlePlatforms={handlePlatforms} />
-
-            <GenreContainer handleGenres={handleGenres} />
-
-           <GameModeContainer handleGameModes={handleGameModes} />
-
-           <ImportanceContainer handlePreferences={handlePreferences} />
-
-           <FinishContainer createAPI={createAPI} />
         </main>
     );
 }
