@@ -62,7 +62,7 @@ function GameInfo(props) {
     }
 
     const getRelatedGameDetails = (gameID) => {
-        navigate("/craveplay/gameinfo/" + gameID);
+        navigate("/gameinfo/" + gameID);
     }
 
     return (

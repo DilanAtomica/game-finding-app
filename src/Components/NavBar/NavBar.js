@@ -17,7 +17,7 @@ function NavBar(props) {
     const {theme, toggleTheme} = useContext(AppContext);
 
     const handleSubmit = () => {
-        navigate("/craveplay/games/&search=" + searchInput + "&page=1");
+        navigate("/games/&search=" + searchInput + "&page=1");
     }
 
     return (
@@ -29,7 +29,7 @@ function NavBar(props) {
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
                 </form>
                 <div className="navRightSide">
-                    <button  onClick={() => navigate("/craveplay/favorites")} type="button"><FavoriteIcon id="favoriteIcon"/></button>
+                    <button  onClick={() => navigate("/favorites")} type="button"><FavoriteIcon id="favoriteIcon"/></button>
                     <button onClick={() => toggleTheme()}>{theme === "light"
                         ? <DarkModeIcon id="themeToggler" style={{color: "black"}} />
                         : <LightModeIcon id="themeToggler" style={{color: "#FFCC32"}}/>}</button>

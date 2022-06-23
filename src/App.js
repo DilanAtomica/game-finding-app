@@ -47,10 +47,10 @@ function App() {
         <HashRouter>
         <Routes>
             <Route path="/" element={<> <NavBar /> <FrontPage /> </>} />
-            <Route path="/craveplay/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
-            <Route path="/craveplay/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
-            <Route path="/craveplay/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
-            <Route path="/craveplay/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
+            <Route path="/games/:apiUrl" element={<> <NavBar /> <GamesPage /> <Footer /> </>} />
+            <Route path="/gameinfo/:gameID" element={<> <NavBar /> <GameInfo /> <Footer /> </>} />
+            <Route path="/favorites" element={<> <NavBar /> <FavoritesPage /> <Footer /> </>} />
+            <Route path="/noresults" element={<> <NavBar /> <NoResultsPage /> </>} />
         </Routes>
       </HashRouter>
         </div>

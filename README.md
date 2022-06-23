@@ -1,6 +1,6 @@
 ### `Link to demo`
 
-https://dilanatomica.github.io/craveplay/
+https://dilanatomica.github.io/game-finding-app/
 
 ### `About Project`
 

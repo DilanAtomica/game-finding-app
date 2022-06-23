@@ -30,14 +30,14 @@ function GamesPage(props) {
             console.log(API);
             const response = await axios.get(API);
             const results = response.data.results;
-            results.length === 0 && navigate("/craveplay/noresults");
+            results.length === 0 && navigate("/noresults");
 
             setGames(results);
             getPages(results.length);
             deActiveLoader();
         } catch {
             console.log("Error")
-            navigate("/craveplay/noresults");
+            navigate("/noresults");
         }
     }
 
@@ -74,11 +74,11 @@ function GamesPage(props) {
             const prevPageNumber = parseInt(e.currentTarget.id) - 1;
             newAPI = apiUrl.replace("&page=" + currentPage.toString(), "&page=" + prevPageNumber);
         }
-        navigate("/craveplay/games/" + newAPI);
+        navigate("/games/" + newAPI);
     };
 
     const getGameInfo = (gameID) => {
-        navigate("/craveplay/gameinfo/" + gameID);
+        navigate("/gameinfo/" + gameID);
     }
 
     return (

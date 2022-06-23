@@ -45,7 +45,7 @@ function FavoritesPage(props) {
     };
 
     const getGameInfo = (gameID) => {
-        navigate("/craveplay/gameinfo/" + gameID);
+        navigate("/gameinfo/" + gameID);
     }
 
     return (

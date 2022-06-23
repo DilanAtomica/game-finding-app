@@ -52,7 +52,7 @@ function FrontPage(props) {
         if(filters.preferences.length !== 0)string = string.slice(0, -1);
 
         string = string + "&page=1";
-        navigate("/craveplay/games/" + string);
+        navigate("/games/" + string);
 
     }
 
