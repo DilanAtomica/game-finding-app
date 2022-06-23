@@ -1,6 +1,6 @@
 {
-  "homepage": "http://DilanAtomica.github.io/craveplay",
-  "name": "craveplay",
+  "homepage": "http://DilanAtomica.github.io/game-finding-app",
+  "name": "game-finding-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
