@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    background-color: #5CDB95;
+    background-color: #9E918B;
     position: fixed;
     z-index: 10;
     padding: 0.5rem;
@@ -12,7 +12,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #5CDB95;
+    background-color: #9E918B;
 }
 
 #logo {
@@ -24,7 +24,7 @@ nav {
 }
 
 #favoriteIcon {
-    background-color: #5CDB95;
+    background-color: #9E918B;
     color: #B8192F;
     font-size: 2rem;
     cursor: pointer;
@@ -47,7 +47,6 @@ button {
     background-color: white;
     display: flex;
     align-items: center;
-    border: 2px solid #05386B ;
 }
 
 .searchBox > input  {
@@ -63,7 +62,7 @@ button {
 #searchIcon {
     padding-right: 0.5rem;
     border-radius: 15px;
-    color: #05386B;
+    color: #000000;
     background-color: white;
 }
 
@@ -74,15 +73,11 @@ button {
 }
 
 #themeToggler {
-    background-color: #5CDB95;
+    background-color: #9E918B;
     color: #05386B;
     font-size: 2rem;
     cursor: pointer;
 
-}
-
-#dark header, #dark header nav, #dark #favoriteIcon, #dark #themeToggler{
-    background-color: #379683;
 }
 
 #dark .searchBox, #dark .searchBox > input, #dark #searchIcon {

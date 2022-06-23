@@ -9,9 +9,9 @@ function ImportanceContainer({handlePreferences}) {
         <section className="importanceContainer" id="phaseFour">
             <h1>Choose preferences</h1>
             <ul className="importanceOptions">
-                <ImportanceButton handlePreferences={handlePreferences} idName="great-soundtrack" color="#00ABBD" importanceName="Great Soundtrack" />
-                <ImportanceButton handlePreferences={handlePreferences} idName="atmospheric" color="#0099DD" importanceName="Atmospheric" />
-                <ImportanceButton handlePreferences={handlePreferences} idName="full-controller-support" color="#FF9933" importanceName="Controller support" />
+                <ImportanceButton handlePreferences={handlePreferences} idName="great-soundtrack" importanceName="Great Soundtrack" />
+                <ImportanceButton handlePreferences={handlePreferences} idName="atmospheric" importanceName="Atmospheric" />
+                <ImportanceButton handlePreferences={handlePreferences} idName="full-controller-support" importanceName="Controller support" />
             </ul>
 
         </section>

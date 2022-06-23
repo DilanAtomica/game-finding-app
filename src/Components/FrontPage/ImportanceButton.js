@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import {useState} from "react";
 
 
-function ImportanceButton({idName, color, importanceName, handlePreferences}) {
+function ImportanceButton({idName, importanceName, handlePreferences}) {
 
     const [isClicked, setIsClicked] = useState(false);
 
@@ -16,7 +16,7 @@ function ImportanceButton({idName, color, importanceName, handlePreferences}) {
     return (
         <li className="importanceButton">
             <Button type="button" onClick={handleClick} id={idName} style={{transform: isClicked ? "rotateY(180deg)" : "rotateY(0deg)"}}  variant="contained">
-                <div className="importanceFront" style={{backgroundColor: color}}><h2>{importanceName}</h2></div>
+                <div className="importanceFront" style={{backgroundColor: "#05386B"}}><h2>{importanceName}</h2></div>
                 <div className="importanceBack" style={{backgroundColor: "gray"}}><h2>{importanceName}</h2></div>
             </Button>
         </li>
