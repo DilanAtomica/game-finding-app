@@ -4,10 +4,12 @@
     width: 12rem;
     height: 2.5rem;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .genreButton:hover {
     transform: scale(1.2);
+    z-index: 2;
 }
 
 .genreFront > h2, .genreBack > h2 {
