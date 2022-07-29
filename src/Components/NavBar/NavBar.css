@@ -23,6 +23,15 @@ nav {
     border-radius: 15px;
 }
 
+#logoSmall {
+    cursor: pointer;
+    object-fit: contain;
+    height: 2rem;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+}
+
 #favoriteIcon {
     background-color: #9E918B;
     color: #B8192F;

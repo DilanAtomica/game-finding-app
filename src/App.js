@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, createContext} from "react";
+import {useState, createContext, useEffect} from "react";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import FrontPage from "./Pages/FrontPage/FrontPage";
 import NavBar from "./Components/NavBar/NavBar";
@@ -22,6 +22,26 @@ function App() {
 
     const [theme, setTheme] = useState("light");
 
+    const [userWidth, setUserWidth] = useState(0);
+
+    useEffect(() => {
+        setUserWidth(window.innerWidth);
+        console.log("hey")
+    }, []);
+
+    useEffect(() => {
+
+        function handleWindowResize() {
+            setUserWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
     const toggleTheme = () => {
         setTheme((curr) => (curr === "light" ? "dark" : "light"));
     }
@@ -41,7 +61,7 @@ function App() {
 
 
     return (
-      <AppContext.Provider value={{loading, activateLoader, deActiveLoader, theme, toggleTheme}}>
+      <AppContext.Provider value={{loading, activateLoader, deActiveLoader, theme, toggleTheme, userWidth}}>
         <div className="App" id={theme}>
             <PacmanLoader color={theme === "light" ? "#05386B" : "white"} loading={loading} css={override} height="100" size={50} />
         <HashRouter>

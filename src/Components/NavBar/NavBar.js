@@ -8,13 +8,14 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import {useContext} from "react";
 import {AppContext} from "../../App";
 import Logo from "../../Images/Logo/logoCravePlay.PNG";
+import LogoSmall from "../../Images/Logo/logoSmallCravePlay.png";
 
 function NavBar(props) {
 
     const [searchInput, setSearchInput] = useState("");
 
     let navigate = useNavigate();
-    const {theme, toggleTheme} = useContext(AppContext);
+    const {theme, toggleTheme, userWidth} = useContext(AppContext);
 
     const handleSubmit = () => {
         navigate("/games/&search=" + searchInput + "&page=1");
@@ -23,7 +24,9 @@ function NavBar(props) {
     return (
         <header>
             <nav>
-                <button onClick={() => navigate("/")} type="button"><img id="logo" alt="CravePlay logo" src={Logo} /></button>
+                <button onClick={() => navigate("/")} type="button">
+                    {userWidth < 400 ? <img id="logoSmall" alt="CravePlay logo" src={LogoSmall} /> : <img id="logo" alt="CravePlay logo" src={Logo} />}
+                </button>
                 <form onSubmit={handleSubmit} className="searchBox">
                     <input type="text" placeholder="Search for games"  onChange={(e) => setSearchInput(e.target.value)} required/>
                     <button type="submit"><SearchIcon id="searchIcon" /></button>
