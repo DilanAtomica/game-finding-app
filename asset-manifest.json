@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/game-finding-app/static/css/main.92a58f5c.css",
+    "main.css": "/game-finding-app/static/css/main.a73ce062.css",
     "main.js": "/game-finding-app/static/js/main.4437e00c.js",
     "static/js/787.fc26afce.chunk.js": "/game-finding-app/static/js/787.fc26afce.chunk.js",
     "static/media/nintendoDS.png": "/game-finding-app/static/media/nintendoDS.4f1a544e9035e933c0f6.png",
@@ -31,12 +31,12 @@
     "static/media/metacritic.png": "/game-finding-app/static/media/metacritic.71e7e12254f73fa8abc3.png",
     "static/media/logoCravePlay.PNG": "/game-finding-app/static/media/logoCravePlay.88872496e03f9672d3af.PNG",
     "index.html": "/game-finding-app/index.html",
-    "main.92a58f5c.css.map": "/game-finding-app/static/css/main.92a58f5c.css.map",
+    "main.a73ce062.css.map": "/game-finding-app/static/css/main.a73ce062.css.map",
     "main.4437e00c.js.map": "/game-finding-app/static/js/main.4437e00c.js.map",
     "787.fc26afce.chunk.js.map": "/game-finding-app/static/js/787.fc26afce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92a58f5c.css",
+    "static/css/main.a73ce062.css",
     "static/js/main.4437e00c.js"
   ]
 }
