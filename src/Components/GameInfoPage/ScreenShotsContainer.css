@@ -61,5 +61,11 @@
     #swiper #swiperSlide > img {
         height: 15rem;
     }
+
+    .screenShotsContainer .swiper-pagination {
+        top: 90%;
+    }
 }
+
+
 
